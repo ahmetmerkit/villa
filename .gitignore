@@ -1,0 +1,19 @@
+# Large files and folders
+video/
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Node modules (if you add any later)
+node_modules/
+
+# Build outputs
+dist/
+build/
