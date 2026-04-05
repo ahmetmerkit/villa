@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarbuVillas — Premium Villas Ready to Move In</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%238a7250'/><text x='32' y='46' text-anchor='middle' font-family='Inter,sans-serif' font-size='40' font-weight='700' fill='white'>M</text></svg>" type="image/svg+xml">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HZJBEQ16D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1HZJBEQ16D');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #8a7250;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 620px;
+      line-height: 1.7;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: #8a7250;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #6e5a3e; }
+    .btn-outline {
+      background: transparent;
+      color: #1a1a1a;
+      border: 2px solid #d4cfc7;
+    }
+    .btn-outline:hover { border-color: #8a7250; color: #8a7250; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s;
+    }
+    .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo span { color: #8a7250; }
+    .logo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #8a7250;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #555;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .nav-actions { display: flex; align-items: center; gap: 16px; }
+    .language-select {
+      padding: 10px 12px;
+      border: 1px solid #d4cfc7;
+      border-radius: 8px;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .nav-sahibinden {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border: 2px solid #ff6600;
+      border-radius: 6px;
+      color: #ff6600;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .nav-sahibinden:hover { background: #ff6600; color: #fff; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: #1a1a1a;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(165deg, #f5f0ea 0%, #e8e2d8 50%, #d4cfc7 100%);
+      position: relative;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 70%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(138,114,80,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(138,114,80,0.12);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #8a7250;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #8a7250;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-image-placeholder {
+      width: 110%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #c9bfae 0%, #a99a82 100%);
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 15, 15, 0.08), rgba(15, 15, 15, 0.28));
+      opacity: 1;
+    }
+    .hero-image-placeholder .placeholder-text {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-image-placeholder .placeholder-icon {
+      font-size: 3rem;
+      margin-bottom: 8px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .hero-stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #8a7250;
+    }
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 2px;
+    }
+
+    /* ===== ABOUT PROJECT ===== */
+    .about { background: #fff; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    .about-image {
+      aspect-ratio: 3/2.5;
+      background: linear-gradient(135deg, #e8e2d8, #d4cfc7);
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8a7250;
+      font-weight: 500;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 15, 15, 0.02), rgba(15, 15, 15, 0.18));
+    }
+    .about-image-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #1a1a1a;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .about-image-caption strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .about-image-caption span {
+      font-size: 0.82rem;
+      color: #666;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .about-feature-icon {
+      width: 40px;
+      height: 40px;
+      background: #f5f0ea;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+    .about-feature h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .about-feature p {
+      font-size: 0.8rem;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* ===== VILLA TYPES ===== */
+    .villas { background: #f5f0ea; }
+    .villas-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .villas-header .section-subtitle { margin: 0 auto; }
+    .villas-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .villa-card--wide {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .villa-card--wide .villa-card-image {
+      width: 45%;
+      flex-shrink: 0;
+      aspect-ratio: unset;
+      min-height: 360px;
+      border-radius: 0;
+    }
+    .villa-card--wide .villa-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 44px;
+    }
+    .villa-card--wide .villa-card-body h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .villa-card--wide .villa-card-body > p {
+      margin-bottom: 28px;
+    }
+    @media (max-width: 768px) {
+      .villa-card--wide {
+        flex-direction: column;
+      }
+      .villa-card--wide .villa-card-image {
+        width: 100%;
+        min-height: 240px;
+        aspect-ratio: 16/10;
+      }
+      .villa-card--wide .villa-card-body {
+        padding: 28px;
+      }
+    }
+    .villa-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .villa-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+    .villa-card-image {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #c9bfae, #a99a82);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    .villa-card-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 10, 10, 0.08), rgba(10, 10, 10, 0.46));
+    }
+    .villa-card-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: #8a7250;
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 1;
+    }
+    .villa-card-image-label {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+    }
+    .villa-card-image-label strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+    .villa-card-image-label span {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.86);
+    }
+    .villa-card-body { padding: 28px; }
+    .villa-card-body h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .villa-card-body > p {
+      color: #666;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .villa-specs {
+      display: flex;
+      gap: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+      margin-bottom: 20px;
+    }
+    .villa-spec {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: #666;
+    }
+    .villa-spec-icon { font-size: 1rem; }
+    .villa-card-actions { display: flex; gap: 12px; }
+    .villa-card-actions .btn { padding: 10px 22px; font-size: 0.85rem; }
+    .twin-showcase {
+      margin-top: 24px;
+    }
+    .twin-facade-banner {
+      margin-bottom: 28px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    .twin-facade-img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .twin-facade-labels {
+      display: flex;
+      justify-content: space-around;
+      padding: 14px 20px 6px;
+      background: #1a1a1a;
+    }
+    .twin-facade-label {
+      background: #8a7250;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+    .twin-facade-caption {
+      padding: 10px 20px 16px;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      margin: 0;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .twin-facade-img { height: 320px; }
+      .twin-facade-label { font-size: 0.72rem; padding: 4px 10px; }
+    }
+    .twin-highlight-map {
+      position: relative;
+      min-height: 560px;
+      border-radius: 18px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+    .twin-highlight-map::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(12,12,12,0.12), rgba(12,12,12,0.38));
+    }
+    .twin-highlight-intro {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 1;
+      color: #fff;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: rgba(20,20,20,0.38);
+      backdrop-filter: blur(10px);
+    }
+    .twin-highlight-intro h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .twin-highlight-intro p {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.88);
+    }
+    .twin-highlight-box {
+      position: absolute;
+      border: 2px solid rgba(255,255,255,0.92);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      z-index: 1;
+    }
+    .twin-highlight-box span {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 38px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #8a7250;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .twin-highlight-1 { top: 140px; left: 46px; width: 150px; height: 300px; }
+    .twin-highlight-2 { top: 120px; left: 208px; width: 148px; height: 320px; }
+    .twin-highlight-3 { top: 112px; left: 365px; width: 146px; height: 325px; }
+    .twin-highlight-4 { top: 110px; left: 522px; width: 150px; height: 322px; }
+    .twin-video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .twin-unit-card {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      gap: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      min-height: 280px;
+    }
+    .twin-unit-card.villa-a {
+      background: linear-gradient(135deg, #e0f7f5 0%, #d0eaf8 100%);
+    }
+    .twin-unit-card.villa-b {
+      background: linear-gradient(135deg, #d0e4f5 0%, #b8d0ed 100%);
+    }
+    .twin-unit-card.villa-c {
+      background: linear-gradient(135deg, #fae0e0 0%, #f5c8c8 100%);
+    }
+    .twin-unit-card.villa-d {
+      background: linear-gradient(135deg, #f5eedc 0%, #ede0c4 100%);
+    }
+    .twin-unit-card video {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .twin-unit-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 28px;
+    }
+    .twin-unit-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #ebe3d7;
+      color: #6e5a3e;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .twin-unit-copy h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+    .twin-unit-copy p {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .twin-unit-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: #666;
+    }
+    .twin-unit-meta span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(0,0,0,0.10);
+    }
+    .twin-unit-palette {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .twin-unit-palette-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888;
+    }
+    .palette-swatches { display: flex; gap: 6px; }
+    .palette-swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,0.10);
+      display: inline-block;
+    }
+    .chip-turquoise { background: #c6f0ec; color: #0a6b62; }
+    .chip-blue { background: #cce0f5; color: #1a508a; }
+    .chip-red { background: #fad5d5; color: #9b1c1c; }
+    .chip-cream { background: #f5eedc; color: #7a5c30; }
+    .chip-gold { background: #ead7a2; color: #6b4a10; }
+    .villa-e-card {
+      background: linear-gradient(135deg, #f3ecdf 0%, #dfcfb5 52%, #d4c1aa 100%);
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 36px;
+    }
+    .villa-e-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .villa-e-header-text { flex: 1; min-width: 260px; }
+    .villa-e-header-text h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .villa-e-header-text p {
+      font-size: 0.9rem;
+      color: #5a4a38;
+      line-height: 1.6;
+    }
+    .single-villa-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .single-villa-photo-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .single-villa-photo-grid img:hover { transform: scale(1.02); }
+    @media (max-width: 900px) {
+      .single-villa-photo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .single-villa-photo-grid { grid-template-columns: 1fr; }
+    }
+    .villas-aerial {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .villas-aerial img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+    .twin-unit-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 4/3;
+    }
+    .villas-section-divider {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 56px 0 40px;
+    }
+    .villas-section-divider::before,
+    .villas-section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #d4cfc7;
+    }
+    .villas-section-divider-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #8a7250;
+      white-space: nowrap;
+    }
+
+    /* ===== AMENITIES ===== */
+    .amenities { background: #fff; }
+    .amenities-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .amenities-header .section-subtitle { margin: 0 auto; }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .amenity-card {
+      text-align: center;
+      padding: 40px 24px;
+      background: #fafafa;
+      border-radius: 16px;
+      transition: all 0.3s;
+    }
+    .amenity-card:hover {
+      background: #f5f0ea;
+      transform: translateY(-2px);
+    }
+    .amenity-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .amenity-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .amenity-card p {
+      font-size: 0.82rem;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* ===== GALLERY PLACEHOLDER ===== */
+    .gallery { background: #1a1a1a; color: #fff; }
+    .gallery .section-label { color: #c9bfae; }
+    .gallery .section-subtitle { color: #999; }
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #333, #2a2a2a);
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: opacity 0.3s;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      padding: 18px;
+    }
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.62));
+    }
+    .gallery-item span {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      backdrop-filter: blur(8px);
+    }
+    .gallery-item:hover { opacity: 0.8; }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: linear-gradient(135deg, #8a7250, #6e5a3e);
+      color: #fff;
+      text-align: center;
+    }
+    .cta .section-label { color: rgba(255,255,255,0.7); }
+    .cta .section-title { color: #fff; }
+    .cta .section-subtitle { color: rgba(255,255,255,0.8); margin: 0 auto 36px; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff;
+      color: #8a7250;
+      font-weight: 600;
+    }
+    .btn-white:hover { background: #f5f0ea; }
+    .btn-outline-white {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #fff;
+    }
+    .btn-outline-white:hover { border-color: #fff; }
+
+    /* ===== MAP ===== */
+    .map-section { background: #fff; padding-bottom: 0; }
+    .map-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .map-header .section-subtitle { margin: 0 auto; }
+    .map-wrapper {
+      width: 100%;
+      height: 450px;
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+      background: #e8e2d8;
+    }
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #1a1a1a;
+      color: #999;
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo { color: #fff; margin-bottom: 16px; }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: #2a2a2a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+    .footer-social a:hover { background: #8a7250; color: #fff; }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; }
+
+    /* ===== SAHIBINDEN FLOAT ===== */
+    .sahibinden-float {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background: #ff6600;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(255,102,0,0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.7rem;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .sahibinden-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(255,102,0,0.5);
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 24px;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      z-index: 999;
+    }
+    .mobile-menu.active { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .mobile-language-select {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    html[dir="rtl"] body {
+      text-align: right;
+    }
+    html[dir="rtl"] .nav-links,
+    html[dir="rtl"] .nav-actions,
+    html[dir="rtl"] .hero-buttons,
+    html[dir="rtl"] .villa-specs,
+    html[dir="rtl"] .cta-buttons,
+    html[dir="rtl"] .footer-social {
+      flex-direction: row-reverse;
+    }
+    html[dir="rtl"] .navbar .container,
+    html[dir="rtl"] .hero .container,
+    html[dir="rtl"] .about-grid,
+    html[dir="rtl"] .footer-grid {
+      direction: rtl;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero .container { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 2.75rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .villas-grid { grid-template-columns: 1fr; }
+      .twin-video-grid { grid-template-columns: 1fr; }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .section-title { font-size: 1.75rem; }
+      .nav-links, .nav-actions { display: none; }
+      .hamburger { display: flex; }
+      .hero { min-height: auto; padding: 100px 0 60px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; margin-bottom: 28px; }
+      .hero-stats { flex-direction: column; gap: 16px; margin-top: 32px; padding-top: 24px; }
+      .hero-stat-number { font-size: 1.7rem; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; justify-content: center; text-align: center; }
+      .about-grid { gap: 40px; }
+      .about-features { grid-template-columns: 1fr; }
+      .twin-video-grid { grid-template-columns: 1fr; }
+      .twin-unit-card { grid-template-columns: 1fr; }
+      .twin-unit-copy { padding: 20px; }
+      .twin-unit-meta { gap: 6px; }
+      .twin-highlight-map { min-height: 300px; }
+      .twin-highlight-box { display: none; }
+      .twin-highlight-intro { position: relative; top: auto; left: auto; right: auto; border-radius: 14px 14px 0 0; }
+      .villa-e-card { padding: 20px; }
+      .villa-e-header { flex-direction: column; gap: 12px; margin-bottom: 20px; }
+      .villa-e-header-text { min-width: 0; flex: unset; }
+      .villa-e-header-text h4 { font-size: 1.05rem; }
+      .villa-e-header-text p { font-size: 0.85rem; }
+      .single-villa-photo-grid { gap: 8px; margin-top: 20px; }
+      .twin-unit-palette { flex-wrap: wrap; }
+      .twin-unit-palette-label { font-size: 0.7rem; }
+      .villa-card-body { padding: 20px; }
+      .villa-card--wide .villa-card-body { padding: 20px; }
+      .villa-specs { gap: 16px; flex-wrap: wrap; }
+      .villa-card-actions { flex-wrap: wrap; }
+      .villa-card-actions .btn { flex: 1; min-width: 0; justify-content: center; text-align: center; }
+      .villas-section-divider { margin: 36px 0 24px; }
+      .amenities-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .map-wrapper { height: 300px; }
+      .whatsapp-float { width: 52px; height: 52px; bottom: 20px; right: 16px; }
+      .whatsapp-float svg { width: 28px; height: 28px; }
+      .sahibinden-float { width: 52px; height: 52px; bottom: 82px; right: 16px; font-size: 0.62rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta-buttons .btn { width: 100%; max-width: 320px; justify-content: center; text-align: center; }
+      .twin-facade-labels { flex-wrap: wrap; gap: 6px; justify-content: center; padding: 12px 12px 6px; }
+      .amenities-header, .gallery-header, .villas-header, .map-header { margin-bottom: 36px; }
+      .section-subtitle { font-size: 0.95rem; }
+    }
+
+    @media (max-width: 768px) {
+      .video-section { max-width: 100% !important; padding: 72px 12px 16px 12px !important; }
+    }
+
+    /* ===== SMALL SCREENS ===== */
+    @media (max-width: 480px) {
+      .video-section { padding: 68px 8px 12px 8px !important; }
+      .section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+      .section-title { font-size: 1.4rem; }
+      .section-label { font-size: 0.7rem; letter-spacing: 2px; }
+      .section-subtitle { font-size: 0.88rem; }
+      .hero { padding: 88px 0 48px; }
+      .hero h1 { font-size: 1.65rem; letter-spacing: -0.5px; }
+      .hero p { font-size: 0.92rem; }
+      .hero-badge { font-size: 0.72rem; padding: 5px 12px; }
+      .hero-stat-number { font-size: 1.5rem; }
+      .hero-stat-label { font-size: 0.75rem; }
+      .twin-unit-copy { padding: 16px; }
+      .twin-unit-copy h4 { font-size: 0.95rem; }
+      .twin-unit-copy p { font-size: 0.82rem; }
+      .twin-unit-chip { font-size: 0.72rem; }
+      .twin-unit-meta span { padding: 5px 8px; font-size: 0.72rem; }
+      .villa-e-card { padding: 12px; }
+      .villa-e-header { gap: 8px; margin-bottom: 14px; }
+      .villa-e-header-text h4 { font-size: 0.95rem; }
+      .villa-e-header-text p { font-size: 0.78rem; }
+      .single-villa-photo-grid { gap: 6px; margin-top: 14px; }
+      .single-villa-photo-grid img { border-radius: 8px; }
+      .villa-card-body { padding: 16px; }
+      .villa-card-body h3 { font-size: 1.15rem; }
+      .villa-card-body > p { font-size: 0.85rem; }
+      .amenity-card { padding: 28px 16px; }
+      .amenity-icon { font-size: 2rem; }
+      .amenity-card h4 { font-size: 0.92rem; }
+      .amenity-card p { font-size: 0.78rem; }
+      .gallery-item { aspect-ratio: 16/10; }
+      .btn { padding: 12px 24px; font-size: 0.88rem; }
+      .footer { padding: 48px 0 24px; }
+      .footer-grid { gap: 28px; }
+      .footer-brand p { font-size: 0.82rem; }
+      .footer-col a { font-size: 0.82rem; }
+      .footer-bottom { font-size: 0.75rem; }
+      .twin-facade-img { height: 220px; }
+      .twin-facade-caption { font-size: 0.75rem; padding: 8px 14px 12px; }
+      .twin-facade-label { font-size: 0.68rem; padding: 3px 8px; }
+      .cta .section-title { font-size: 1.35rem; }
+      .about-feature-icon { width: 36px; height: 36px; font-size: 1rem; }
+      .about-feature h4 { font-size: 0.85rem; }
+      .about-feature p { font-size: 0.75rem; }
+      .map-wrapper { height: 250px; border-radius: 12px 12px 0 0; }
+      .logo { font-size: 1.15rem; }
+      .logo-icon { width: 30px; height: 30px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo"><span class="logo-icon">M</span> Marbu<span>Villas</span></div>
+      <div class="nav-links">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#villas" data-i18n="nav_villas">Villas</a>
+        <a href="#amenities" data-i18n="nav_amenities">Amenities</a>
+        <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+        <a href="#location" data-i18n="nav_location">Location</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <select class="language-select" id="languageSelect" aria-label="Language selector">
+          <option value="en">English</option>
+          <option value="tr">Turkce</option>
+          <option value="ar">العربية</option>
+          <option value="ru">Русский</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()" data-i18n="nav_about">About</a>
+    <a href="#villas" onclick="closeMobileMenu()" data-i18n="nav_villas">Villas</a>
+    <a href="#amenities" onclick="closeMobileMenu()" data-i18n="nav_amenities">Amenities</a>
+    <a href="#gallery" onclick="closeMobileMenu()" data-i18n="nav_gallery">Gallery</a>
+    <a href="#location" onclick="closeMobileMenu()" data-i18n="nav_location">Location</a>
+    <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
+    <select class="mobile-language-select" id="mobileLanguageSelect" aria-label="Language selector">
+      <option value="en">English</option>
+      <option value="tr">Turkce</option>
+      <option value="ar">العربية</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" style="padding: 72px 16px 24px 16px; max-width: 92%; margin: 0 auto;">
+    <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 12px; overflow: hidden;">
+      <iframe
+        src="https://www.youtube.com/embed/FeAxvYglHb0?autoplay=1&mute=1&loop=1&playlist=FeAxvYglHb0&rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        loading="lazy"
+        title="MarbuVillas"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">✦ Ready to Move In — Fully Furnished</div>
+        <h1 data-i18n-html="hero_title">Premium Villas <br/><em>Built for Living</em></h1>
+        <p data-i18n="hero_text">Discover our exclusive villa compound in Beylikdüzü, Istanbul with panoramic sea views, 8 fully furnished residences, a 3,000 m² site, Siemens appliances, and Mitsubishi climate systems throughout.</p>
+        <div class="hero-buttons">
+          <a href="#villas" class="btn btn-outline" data-i18n="explore_villas">Explore Villas</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number">8</div>
+            <div class="hero-stat-label" data-i18n="stat_total_villas">Total Villas</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">4+4</div>
+            <div class="hero-stat-label" data-i18n="stat_twin_single">Twin & Single</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">100%</div>
+            <div class="hero-stat-label" data-i18n="stat_fully_furnished">Fully Furnished</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-placeholder" style="background-image: url('yenivillafoto/villa-exterior-007.jpg');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label" data-i18n="about_label">About the Project</div>
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title" data-i18n="about_title">A Turnkey Living Experience</h2>
+          <p class="section-subtitle" data-i18n="about_text">Each villa is designed as a full-scale family residence with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, 1 master suite with a sea-view rooftop terrace, 2 main kitchens, 1 mini kitchen, a pantry, a private elevator serving every floor, and a built-in Mitsubishi central air conditioning system throughout.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">🏗️</div>
+              <div>
+                <h4 data-i18n="feature_constructed_title">Fully Constructed</h4>
+                <p data-i18n="feature_constructed_text">All 8 villas are built, inspected, and ready for immediate occupancy.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🛋️</div>
+              <div>
+                <h4 data-i18n="feature_furnished_title">Fully Furnished</h4>
+                <p data-i18n="feature_furnished_text">High-quality furniture, beds, kitchen equipment, and appliances included.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🏊</div>
+              <div>
+                <h4 data-i18n="feature_pool_title">Private Pool Area</h4>
+                <p data-i18n="feature_pool_text">Each villa has access to a pool with underground wellness facilities.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">💪</div>
+              <div>
+                <h4 data-i18n="feature_fitness_title">Sauna & Fitness</h4>
+                <p data-i18n="feature_fitness_text">Located beneath the pool — sauna and sports area for residents.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🏡</div>
+              <div>
+                <h4 data-i18n="feature_exterior_title">Modern exterior and landscaped courtyard</h4>
+                <p data-i18n="feature_exterior_text">Clean architecture, pool access, and a fully finished site ready for immediate use.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">⚙️</div>
+              <div>
+                <h4 data-i18n="feature_tech_title">Premium Technical Equipment</h4>
+                <p data-i18n="feature_tech_text">Siemens appliances throughout the kitchens and Mitsubishi HVAC systems installed across the residences.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="about-image" style="background-image: url('ustvilla/ustimaj.jpg');">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VILLA TYPES -->
+  <section class="section villas" id="villas">
+    <div class="container">
+      <div class="villas-header">
+        <div class="section-label" data-i18n="villas_label">Villa Types</div>
+        <h2 class="section-title" data-i18n="villas_title">Choose Your Ideal Villa</h2>
+        <p class="section-subtitle" data-i18n="villas_text">We offer two villa types — twin villas for those who enjoy a connected community, and single villas for those who prefer more privacy and space.</p>
+      </div>
+      <div class="villas-aerial">
+        <img src="ustvilla/ustimaj.jpg" alt="Aerial view — Villa layout">
+      </div>
+      <div class="villas-grid">
+
+        <!-- TWIN VILLA -->
+        <div class="villa-card">
+          <div class="villa-card-body">
+            <h3 data-i18n="twin_villa">Twin Villa</h3>
+            <p data-i18n="twin_text">The twin villas offer approximately 375 m2 of interior space with 5 bedrooms, 2 living rooms, a sea-view master rooftop terrace, 2 main kitchens, 1 mini kitchen, pantry storage, and a private elevator to every floor. Each twin villa follows one of the project's signature interior color themes: blue, green, red, or beige.</p>
+            <div class="villa-specs">
+              <div class="villa-spec">
+                <span class="villa-spec-icon">🛏️</span> <span data-i18n="twin_spec_bedrooms">5 Bedrooms</span>
+              </div>
+              <div class="villa-spec">
+                <span class="villa-spec-icon">🛋️</span> <span data-i18n="twin_spec_bathrooms">2 Living Rooms</span>
+              </div>
+              <div class="villa-spec">
+                <span class="villa-spec-icon">📐</span> <span data-i18n="twin_spec_layout">375 m2 Interior</span>
+              </div>
+            </div>
+            <div class="twin-showcase">
+              <div class="twin-video-grid">
+                <div class="twin-unit-card villa-a">
+                  <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 10px; overflow: hidden;">
+                    <iframe src="https://www.youtube.com/embed/y05DGZ7V0lw?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="encrypted-media" allowfullscreen loading="lazy" title="Villa A"></iframe>
+                  </div>
+                  <div class="twin-unit-copy">
+                    <span class="twin-unit-chip chip-turquoise" data-i18n="twin_unit_1_badge">Twin Villa A</span>
+                    <div class="twin-unit-palette">
+                      <div class="palette-swatches">
+                        <span class="palette-swatch" style="background:#3bbfb5;"></span>
+                        <span class="palette-swatch" style="background:#4a85c8;"></span>
+                      </div>
+                      <span class="twin-unit-palette-label" data-i18n="twin_unit_1_palette">Turquoise &amp; Blue</span>
+                    </div>
+                    <h4 data-i18n="twin_unit_1_title">Turquoise &amp; Blue — Corner Villa</h4>
+                    <p data-i18n="twin_unit_1_text">Villa A sits at the far corner of the row, offering a more private position. Its interior is styled in fresh turquoise and blue — furniture, upholstery and accents all carry these tones for a vibrant, coastal feel.</p>
+                    <div class="twin-unit-meta">
+                      <span data-i18n="twin_meta_corner">🏠 Corner position</span>
+                      <span data-i18n="twin_meta_living">Turquoise furniture</span>
+                      <span data-i18n="twin_meta_ready">Blue accents</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="twin-unit-card villa-b">
+                  <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 10px; overflow: hidden;">
+                    <iframe src="https://www.youtube.com/embed/uEHyoAfzAd8?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="encrypted-media" allowfullscreen loading="lazy" title="Villa B"></iframe>
+                  </div>
+                  <div class="twin-unit-copy">
+                    <span class="twin-unit-chip chip-blue" data-i18n="twin_unit_2_badge">Twin Villa B</span>
+                    <div class="twin-unit-palette">
+                      <div class="palette-swatches">
+                        <span class="palette-swatch" style="background:#1e5fa0;"></span>
+                        <span class="palette-swatch" style="background:#5b97cf;"></span>
+                      </div>
+                      <span class="twin-unit-palette-label" data-i18n="twin_unit_2_palette">Deep Blue</span>
+                    </div>
+                    <h4 data-i18n="twin_unit_2_title">Deep Blue — Pool View Villa</h4>
+                    <p data-i18n="twin_unit_2_text">Villa B is a central unit sitting right beside the pool, with open views over the courtyard. Its deep blue palette — sofas, armchairs and decorative details — brings a calm, sophisticated atmosphere that pairs perfectly with the water views.</p>
+                    <div class="twin-unit-meta">
+                      <span data-i18n="twin_meta_pool">🏊 Pool view</span>
+                      <span data-i18n="twin_meta_salon">Blue furniture</span>
+                      <span data-i18n="twin_meta_family">Elegant interior</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="twin-unit-card villa-c">
+                  <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 10px; overflow: hidden;">
+                    <iframe src="https://www.youtube.com/embed/3jSdAEpxQ1w?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="encrypted-media" allowfullscreen loading="lazy" title="Villa C"></iframe>
+                  </div>
+                  <div class="twin-unit-copy">
+                    <span class="twin-unit-chip chip-red" data-i18n="twin_unit_3_badge">Twin Villa C</span>
+                    <div class="twin-unit-palette">
+                      <div class="palette-swatches">
+                        <span class="palette-swatch" style="background:#c0392b;"></span>
+                        <span class="palette-swatch" style="background:#8e1a1a;"></span>
+                      </div>
+                      <span class="twin-unit-palette-label" data-i18n="twin_unit_3_palette">Bold Red</span>
+                    </div>
+                    <h4 data-i18n="twin_unit_3_title">Bold Red — Pool View Villa</h4>
+                    <p data-i18n="twin_unit_3_text">Villa C is the second central pool-view unit, sitting between B and D with easy courtyard access. Its interior makes a bold statement with rich red wallpaper and red-toned couches — a striking, energetic personality unlike any other unit.</p>
+                    <div class="twin-unit-meta">
+                      <span data-i18n="twin_meta_pool">🏊 Pool view</span>
+                      <span data-i18n="twin_meta_dining">Red wallpaper</span>
+                      <span data-i18n="twin_meta_bright">Red couches</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="twin-unit-card villa-d">
+                  <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 10px; overflow: hidden;">
+                    <iframe src="https://www.youtube.com/embed/ootsDiXYLiE?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="encrypted-media" allowfullscreen loading="lazy" title="Villa D"></iframe>
+                  </div>
+                  <div class="twin-unit-copy">
+                    <span class="twin-unit-chip chip-cream" data-i18n="twin_unit_4_badge">Twin Villa D</span>
+                    <div class="twin-unit-palette">
+                      <div class="palette-swatches">
+                        <span class="palette-swatch" style="background:#e8dfc8;"></span>
+                        <span class="palette-swatch" style="background:#c9b99a;"></span>
+                      </div>
+                      <span class="twin-unit-palette-label" data-i18n="twin_unit_4_palette">Warm Cream</span>
+                    </div>
+                    <h4 data-i18n="twin_unit_4_title">Warm Cream — Corner Villa</h4>
+                    <p data-i18n="twin_unit_4_text">Villa D occupies the opposite corner to Villa A, offering the same sense of privacy and independence. Its soft cream palette — wallpaper, couches and beds in warm neutral tones — creates a serene, timeless interior for relaxed everyday living.</p>
+                    <div class="twin-unit-meta">
+                      <span data-i18n="twin_meta_corner">🏠 Corner position</span>
+                      <span data-i18n="twin_meta_storage">Cream wallpaper</span>
+                      <span data-i18n="twin_meta_private">Neutral furnishings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="villa-card-actions">
+              <a href="#contact" class="btn btn-outline" data-i18n="inquire">Inquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SINGLE VILLA -->
+        <div class="villa-card">
+          <div class="villa-card-body">
+            <div class="villas-section-divider">
+              <span class="villas-section-divider-label" data-i18n="single_divider">Single Villa</span>
+            </div>
+            <h3 data-i18n="single_villa">Single Villa &mdash; Villa E</h3>
+            <p data-i18n="single_text">Villa E follows the same generous planning as the twin villas with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, a sea-view rooftop master terrace, multiple kitchens, private elevator access, and the most independent corner position beside the road.</p>
+            <div class="villa-specs">
+              <div class="villa-spec"><span class="villa-spec-icon">🛏️</span> <span data-i18n="single_spec_bedrooms">5 Bedrooms</span></div>
+              <div class="villa-spec"><span class="villa-spec-icon">🛗</span> <span data-i18n="single_spec_bathrooms">Private Elevator</span></div>
+              <div class="villa-spec"><span class="villa-spec-icon">📐</span> <span data-i18n="single_spec_layout">375 m2 Interior</span></div>
+            </div>
+
+            <div class="villa-e-card" style="margin-top:28px;">
+              <div class="villa-e-header">
+                <div>
+                  <span class="twin-unit-chip chip-gold" style="margin-bottom:14px;" data-i18n="villa_e_chip">Single Villa E</span>
+                  <div class="twin-unit-palette">
+                    <div class="palette-swatches">
+                      <span class="palette-swatch" style="background:#c9a84c;"></span>
+                      <span class="palette-swatch" style="background:#b39a86;"></span>
+                      <span class="palette-swatch" style="background:#e9e2d6;"></span>
+                      <span class="palette-swatch" style="background:#6f4f3b;"></span>
+                    </div>
+                    <span class="twin-unit-palette-label" data-i18n="villa_e_palette">Gold, Taupe, Cream &amp; Walnut</span>
+                  </div>
+                </div>
+                <div class="villa-e-header-text">
+                  <h4 data-i18n="villa_e_title">Villa E — Corner Residence with Gold, Taupe &amp; Cream Character</h4>
+                  <p data-i18n="villa_e_text">Villa E is the standalone single villa, positioned at the corner of the site parallel to the road and opening toward panoramic Beylikduzu sea views. The interiors combine gold-detailed solid wood furniture, taupe upholstery, cream patterned wall finishes, warm walnut cabinetry, Siemens appliances, and Mitsubishi air-conditioning for a fully finished premium residence.</p>
+                  <div class="twin-unit-meta" style="margin-top:14px;">
+                    <span data-i18n="villa_e_meta_corner">🏠 Corner position</span>
+                    <span data-i18n="villa_e_meta_road">🛣️ Road-facing</span>
+                    <span data-i18n="villa_e_meta_detached">🛄 Fully detached</span>
+                    <span data-i18n="villa_e_meta_palette">✨ Gold + taupe palette</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single-villa-photo-grid">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.01 (4).jpeg" alt="Villa E formal salon">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.00.jpeg" alt="Villa E classical dining room">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.02 (9).jpeg" alt="Villa E bedroom and bathroom connection">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.02 (2).jpeg" alt="Villa E walnut kitchen">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.00 (3).jpeg" alt="Villa E open dining and kitchen area">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.00 (5).jpeg" alt="Villa E bedroom with storage area">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.01 (1).jpeg" alt="Villa E children's room">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.34.00 (7).jpeg" alt="Villa E master bedroom">
+                <img src="tekli/WhatsApp Image 2026-04-03 at 13.33.58.jpeg" alt="Villa E exterior corner facade">
+
+
+              </div>
+            </div>
+
+            <div class="villa-card-actions">
+              <a href="#contact" class="btn btn-outline" data-i18n="inquire">Inquire</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="section amenities" id="amenities">
+    <div class="container">
+      <div class="amenities-header">
+        <div class="section-label" data-i18n="amenities_label">Amenities & Features</div>
+        <h2 class="section-title" data-i18n="amenities_title">Social &amp; Wellness Amenities</h2>
+        <p class="section-subtitle" data-i18n="amenities_text">These shared facilities serve the full compound, including both twin and single villas.</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">🏊‍♂️</div>
+          <h4 data-i18n="amenity_pool_title">3 Swimming Pools</h4>
+          <p data-i18n="amenity_pool_text">Three separate pool areas across the compound for daily use, family time, and relaxing outdoor living.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🛁</div>
+          <h4 data-i18n="amenity_sauna_title">2 Turkish Hammams</h4>
+          <p data-i18n="amenity_sauna_text">Separate Turkish hammams for men and women designed for a complete wellness routine.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🏋️</div>
+          <h4 data-i18n="amenity_fitness_title">2 Fitness Centers</h4>
+          <p data-i18n="amenity_fitness_text">Dedicated men’s and women’s fitness spaces fully equipped for daily training.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🛋️</div>
+          <h4 data-i18n="amenity_kitchen_title">2 Relaxation Lounges</h4>
+          <p data-i18n="amenity_kitchen_text">Separate lounge areas for men and women to relax before or after wellness use.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🌿</div>
+          <h4 data-i18n="amenity_bedroom_title">Private Landscaped Gardens</h4>
+          <p data-i18n="amenity_bedroom_text">Each villa benefits from landscaped outdoor areas that support privacy and daily comfort.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🚗</div>
+          <h4 data-i18n="amenity_washing_title">Private Parking</h4>
+          <p data-i18n="amenity_washing_text">Separate parking spaces are assigned to each villa for practical daily access.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🪟</div>
+          <h4 data-i18n="amenity_living_title">Automated Window Shutters</h4>
+          <p data-i18n="amenity_living_text">Motorized shutters across the homes support privacy, comfort, and solar control.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🛡️</div>
+          <h4 data-i18n="amenity_garden_title">Central Security</h4>
+          <p data-i18n="amenity_garden_text">A dedicated guard room and centralized site security support safe compound living.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="section-label" data-i18n="gallery_label">Gallery</div>
+        <h2 class="section-title" data-i18n="gallery_title">See the Villas</h2>
+        <p class="section-subtitle" data-i18n="gallery_text">A selection of the strongest views from the project, including the pool, interiors, and ready-to-move-in furnished spaces.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-image: url('eskifoto/closet-gray-cabinet-window.jpeg');"></div>
+        <div class="gallery-item" style="background-image: url('eskifoto/bedroom-storage-boxes.jpeg');"></div>
+        <div class="gallery-item" style="background-image: url('eskifoto/bathroom-marble-bright.jpeg');"></div>
+        <div class="gallery-item" style="background-image: url('eskifoto/pool-end-view.jpeg');"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta" id="contact">
+    <div class="container">
+      <div class="section-label" data-i18n="cta_label">Interested?</div>
+      <h2 class="section-title" data-i18n="cta_title">Your Dream Villa Awaits</h2>
+      <p class="section-subtitle" data-i18n="cta_text">Reach out to us directly via WhatsApp for personalized assistance.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/905335918230" target="_blank" rel="noopener" class="btn btn-outline-white">
+          <span data-i18n="chat_whatsapp">💬 Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section map-section" id="location">
+    <div class="container">
+      <div class="map-header">
+        <div class="section-label" data-i18n="location_label">Location</div>
+        <h2 class="section-title" data-i18n="location_title">Where We Are</h2>
+        <p class="section-subtitle" data-i18n="location_text">The project is located in Beylikdüzü, Istanbul and enjoys panoramic sea views. Visit the site to experience the compound, the villa layouts, and the surrounding coastal perspective in person.</p>
+      </div>
+    </div>
+    <div class="map-wrapper">
+      <!-- Replace the src with your actual Google Maps embed URL with your villa's coordinates -->
+      <iframe
+        src="https://maps.google.com/maps?q=40.977771,28.609542&z=16&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="MarbuVillas Location"
+        data-i18n-title="map_title"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">M</span> Marbu<span>Villas</span></div>
+          <p data-i18n="footer_brand_text">Premium turnkey villas — fully built, fully furnished, and ready for you. Experience the comfort of move-in ready living.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/905335918230" target="_blank" rel="noopener" aria-label="WhatsApp" data-i18n-aria-label="aria_whatsapp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#villas" data-i18n="villas_label">Villa Types</a>
+          <a href="#amenities" data-i18n="nav_amenities">Amenities</a>
+          <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_property">Property</h4>
+          <a href="#villas" data-i18n="footer_twin_villas">Twin Villas</a>
+          <a href="#villas" data-i18n="footer_single_villas">Single Villas</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_contact">Contact</h4>
+          <a href="https://wa.me/905335918230" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+          <a href="mailto:info@marbuvillas.com">info@marbuvillas.com</a>
+          <a href="#location" data-i18n="view_on_map">View on Map</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 MarbuVillas. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/905335918230" target="_blank" rel="noopener" class="whatsapp-float" title="Chat on WhatsApp" data-i18n-title="chat_whatsapp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.004 2.667A13.24 13.24 0 002.668 15.89a13.12 13.12 0 001.907 6.836L2.667 29.333l6.82-1.82a13.3 13.3 0 006.504 1.694h.013A13.25 13.25 0 0029.333 15.94 13.2 13.2 0 0016.004 2.667zm0 24.2a11 11 0 01-5.617-1.54l-.4-.24-4.177 1.112 1.113-4.12-.264-.42a10.91 10.91 0 01-1.693-5.813 10.99 10.99 0 0118.77-7.766 10.93 10.93 0 013.23 7.8 11.02 11.02 0 01-10.962 10.987zm6.023-8.226c-.33-.166-1.953-.964-2.256-1.075-.303-.11-.523-.166-.743.166s-.853 1.075-1.046 1.296c-.193.22-.386.248-.716.083a9.04 9.04 0 01-2.656-1.64 9.95 9.95 0 01-1.837-2.29c-.193-.33-.02-.51.145-.675.148-.148.33-.386.496-.58.166-.193.22-.33.33-.551.11-.22.056-.414-.028-.58-.083-.166-.743-1.793-1.02-2.453-.268-.644-.54-.557-.743-.567l-.633-.01a1.22 1.22 0 00-.88.414c-.303.33-1.157 1.13-1.157 2.756s1.184 3.198 1.35 3.418c.166.22 2.33 3.558 5.644 4.988.789.34 1.404.543 1.884.695.792.252 1.513.217 2.083.132.636-.095 1.953-.798 2.229-1.569.276-.77.276-1.43.193-1.569-.083-.138-.303-.22-.633-.386z"/>
+    </svg>
+  </a>
+
+  <script>
+    const translations = {
+      en: {
+        page_title: 'MarbuVillas — Premium Villas in Istanbul, Ready to Move In',
+        nav_about: 'About', nav_villas: 'Villas', nav_amenities: 'Amenities', nav_gallery: 'Gallery', nav_location: 'Location', nav_contact: 'Contact',
+        view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'View on Sahibinden →', view_on_sahibinden: 'View on Sahibinden',
+        hero_badge: '✦ Ready to Move In — Fully Furnished', hero_title: 'Premium Villas <br/><em>Built for Living</em>', hero_text: 'Discover our exclusive villa compound in Beylikdüzü, Istanbul with panoramic sea views, 8 fully furnished residences, a 3,000 m² site, Siemens appliances, and Mitsubishi climate systems throughout.',
+        explore_villas: 'Explore Villas', stat_total_villas: 'Total Villas', stat_twin_single: 'Twin & Single', stat_fully_furnished: 'Fully Furnished',
+        about_label: 'About the Project', about_title: 'A Turnkey Living Experience', about_text: 'Each villa is designed as a full-scale family residence with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, 1 master suite with a sea-view rooftop terrace, 2 main kitchens, 1 mini kitchen, a pantry, a private elevator serving every floor, and a built-in Mitsubishi central air conditioning system throughout.',
+        feature_constructed_title: 'Fully Constructed', feature_constructed_text: 'All 8 villas are built, inspected, and ready for immediate occupancy.',
+        feature_furnished_title: 'Fully Furnished', feature_furnished_text: 'High-quality furniture, beds, kitchen equipment, and appliances included.',
+        feature_pool_title: 'Private Pool Area', feature_pool_text: 'Each villa has access to a pool with underground wellness facilities.',
+        feature_fitness_title: 'Sauna & Fitness', feature_fitness_text: 'Located beneath the pool — sauna and sports area for residents.',
+        feature_exterior_title: 'Modern Exterior & Landscaped Courtyard', feature_exterior_text: 'Clean architecture, pool access, and a fully finished site ready for immediate use.',
+        feature_tech_title: 'Premium Technical Equipment', feature_tech_text: 'Siemens appliances throughout the kitchens and Mitsubishi HVAC systems installed across the residences.',
+        about_caption_title: 'Modern exterior and landscaped courtyard', about_caption_text: 'Clean architecture, pool access, and a fully finished site ready for immediate use.',
+        villas_label: 'Villa Types', villas_title: 'Choose Your Ideal Villa', villas_text: 'We offer two villa types — twin villas for those who enjoy a connected community, and single villas for those who prefer more privacy and space.',
+        available_4: '4 Available', twin_villa: 'Twin Villa', twin_label_text: 'Attached layout with direct access to the shared courtyard and pool.', twin_text: 'The twin villas offer approximately 375 m2 of interior space with 5 bedrooms, 2 living rooms, a sea-view master rooftop terrace, 2 main kitchens, 1 mini kitchen, pantry storage, and a private elevator to every floor. Each twin villa follows one of the project\'s signature interior color themes: blue, green, red, or beige.', twin_spec_bedrooms: '5 Bedrooms', twin_spec_bathrooms: '2 Living Rooms', twin_spec_layout: '375 m2 Interior',
+        twin_highlight_title: 'Four Twin Villas In One Facade', twin_highlight_text: 'This elevation shows the full twin villa row. Each highlighted zone marks one unit so visitors can understand the full 4-villa sequence at a glance.',
+        twin_unit_1_badge: 'Twin Villa A', twin_unit_2_badge: 'Twin Villa B', twin_unit_3_badge: 'Twin Villa C', twin_unit_4_badge: 'Twin Villa D',
+        twin_unit_1_palette: 'Turquoise & Blue', twin_unit_2_palette: 'Deep Blue', twin_unit_3_palette: 'Bold Red', twin_unit_4_palette: 'Warm Cream',
+        twin_unit_1_title: 'Turquoise & Blue Color Concept', twin_unit_1_text: 'Villa A is styled around a fresh turquoise and blue palette. The furniture, upholstery, and accents all carry these tones — creating a vibrant, airy interior with a coastal feel.',
+        twin_unit_2_title: 'Deep Blue Color Concept', twin_unit_2_text: 'Villa B is defined by deep blue tones throughout — from the sofas and armchairs to the decorative details. The result is a calm, elegant interior with a sophisticated atmosphere.',
+        twin_unit_3_title: 'Bold Red Color Concept', twin_unit_3_text: 'Villa C makes a striking statement with rich red wallpaper and red-toned couches. The warm, energetic palette gives this interior a bold character and a distinctive personality.',
+        twin_unit_4_title: 'Warm Cream Color Concept', twin_unit_4_text: 'Villa D embraces a soft cream palette throughout — cream wallpaper, neutral-toned couches and beds create a serene, timeless interior designed for relaxed and comfortable everyday living.',
+        twin_meta_living: 'Turquoise furniture', twin_meta_ready: 'Blue accents', twin_meta_salon: 'Blue furniture', twin_meta_family: 'Elegant interior', twin_meta_dining: 'Red wallpaper', twin_meta_bright: 'Red couches', twin_meta_storage: 'Cream wallpaper', twin_meta_private: 'Neutral furnishings', twin_meta_corner: '🏠 Corner position', twin_meta_pool: '🏊 Pool view',
+        inquire: 'Inquire', single_villa: 'Single Villa', single_divider: 'Single Villa', single_label_text: 'Detached feel, larger frontage, and more private outdoor presence.', single_text: 'Villa E follows the same generous planning as the twin villas with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, a sea-view rooftop master terrace, multiple kitchens, private elevator access, and the most independent corner position beside the road.', single_spec_bedrooms: '5 Bedrooms', single_spec_bathrooms: 'Private Elevator', single_spec_layout: '375 m2 Interior',
+        villa_e_chip: 'Single Villa E', villa_e_palette: 'Gold, Taupe, Cream & Walnut', villa_e_title: 'Villa E — Corner Residence with Gold, Taupe & Cream Character', villa_e_text: 'Villa E is the standalone single villa, positioned at the corner of the site parallel to the road and opening toward panoramic Beylikduzu sea views. The interiors combine gold-detailed solid wood furniture, taupe upholstery, cream patterned wall finishes, warm walnut cabinetry, Siemens appliances, and Mitsubishi air-conditioning for a fully finished premium residence.', villa_e_meta_corner: '🏠 Corner position', villa_e_meta_road: '🛣️ Road-facing', villa_e_meta_detached: '🛄 Fully detached', villa_e_meta_palette: '✨ Gold + taupe palette',
+        amenities_label: 'Amenities & Features', amenities_title: 'Social & Wellness Amenities', amenities_text: 'These shared facilities serve the full compound, including both twin and single villas.',
+        amenity_pool_title: '3 Swimming Pools', amenity_pool_text: 'Three separate pool areas across the compound for daily use, family time, and relaxing outdoor living.', amenity_sauna_title: '2 Turkish Hammams', amenity_sauna_text: 'Separate Turkish hammams for men and women designed for a complete wellness routine.', amenity_fitness_title: '2 Fitness Centers', amenity_fitness_text: 'Dedicated men\'s and women\'s fitness spaces fully equipped for daily training.', amenity_kitchen_title: '2 Relaxation Lounges', amenity_kitchen_text: 'Separate lounge areas for men and women to relax before or after wellness use.', amenity_bedroom_title: 'Private Landscaped Gardens', amenity_bedroom_text: 'Each villa benefits from landscaped outdoor areas that support privacy and daily comfort.', amenity_washing_title: 'Private Parking', amenity_washing_text: 'Separate parking spaces are assigned to each villa for practical daily access.', amenity_living_title: 'Automated Window Shutters', amenity_living_text: 'Motorized shutters across the homes support privacy, comfort, and solar control.', amenity_garden_title: 'Central Security', amenity_garden_text: 'A dedicated guard room and centralized site security support safe compound living.',
+        gallery_label: 'Gallery', gallery_title: 'See the Villas', gallery_text: 'A selection of the strongest views from the project, including the pool, interiors, and ready-to-move-in furnished spaces.', gallery_exterior: 'Exterior Facade', gallery_living: 'Living Room', gallery_kitchen: 'Kitchen', gallery_bedroom: 'Master Bedroom', gallery_pool: 'Pool Courtyard', gallery_bathroom: 'Bathroom',
+        cta_label: 'Interested?', cta_title: 'Your Dream Villa Awaits', cta_text: 'Browse available villas on Sahibinden or reach out to us directly via WhatsApp for personalized assistance.', chat_whatsapp: '💬 Chat on WhatsApp',
+        location_label: 'Location', location_title: 'Where We Are', location_text: 'Located in Beylikdüzü, Istanbul with panoramic sea views. Visit the site to experience the compound, the villa layouts, and the surrounding coastal perspective in person.', map_title: 'MarbuVillas Location',
+        footer_brand_text: 'Premium turnkey villas — fully built, fully furnished, and ready for you. Experience the comfort of move-in ready living.', footer_quick_links: 'Quick Links', footer_property: 'Property', footer_twin_villas: 'Twin Villas', footer_single_villas: 'Single Villas', footer_contact: 'Contact', footer_whatsapp: 'WhatsApp', view_on_map: 'View on Map', footer_rights: '© 2026 MarbuVillas. All rights reserved.', aria_whatsapp: 'WhatsApp', aria_sahibinden: 'Sahibinden'
+      },
+      tr: {
+        page_title: 'MarbuVillas — İstanbul\'da Tasinmaya Hazir Premium Villalar',
+        nav_about: 'Proje', nav_villas: 'Villalar', nav_amenities: 'Ozellikler', nav_gallery: 'Galeri', nav_location: 'Konum', nav_contact: 'Iletisim',
+        view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'Sahibinden ilanini gor →', view_on_sahibinden: 'Sahibinden ilanini gor',
+        hero_badge: '✦ Tasinmaya Hazir — Tam Esyali', hero_title: 'Premium Villalar <br/><em>Yasamak Icin Tasarlandi</em>', hero_text: 'İstanbul Beylikdüzü\'nde panoramik deniz manzarali ozel villa projemizi kesfedin. 8 tam esyali rezidans, 3.000 m²+ arazi, Siemens beyaz esya ve Mitsubishi klima sistemleri.',
+        explore_villas: 'Villalari Incele', stat_total_villas: 'Toplam Villa', stat_twin_single: 'Ikiz ve Mustakil', stat_fully_furnished: 'Tam Esyali',
+        about_label: 'Proje Hakkinda', about_title: 'Anahtar Teslim Yasam Deneyimi', about_text: 'Villa projemiz, zahmetsizce yeni bir hayata adim atmak isteyenler icin tasarlandi. Her villa tamamlanmis, esyalanmis ve ihtiyaciniz olan her seyle donatilmistir. Tum villalarda Mitsubishi merkezi klima sistemi yerlesik olarak mevcuttur.',
+        feature_constructed_title: 'Tamamlanmis Yapi', feature_constructed_text: 'Tum 8 villa insa edilmis, kontrol edilmis ve hemen oturuma hazirdir.',
+        feature_furnished_title: 'Tam Esyali', feature_furnished_text: 'Kaliteli mobilya, yatak, mutfak ekipmani ve beyaz esyalar dahildir.',
+        feature_pool_title: 'Ozel Havuz Alani', feature_pool_text: 'Her villanin, altta wellness alanlari bulunan havuza erisimi vardir.',
+        feature_fitness_title: 'Sauna ve Fitness', feature_fitness_text: 'Havuzun altinda yer alir; sakinler icin sauna ve spor alani sunar.',
+        feature_exterior_title: 'Modern Dis Cephe ve Peyzajli Avlu', feature_exterior_text: 'Temiz mimari, havuz erisimi ve hemen kullanima hazir tamamlanmis bir yasam alani.',
+        feature_tech_title: 'Premium Teknik Donanim', feature_tech_text: 'Mutfaklarda Siemens beyaz esya ve tum konutlarda Mitsubishi klima sistemleri.',
+        about_caption_title: 'Modern dis cephe ve peyzajli avlu', about_caption_text: 'Temiz mimari, havuz erisimi ve hemen kullanima hazir tamamlanmis bir yasam alani.',
+        villas_label: 'Villa Tipleri', villas_title: 'Size Uygun Villayi Secin', villas_text: 'Toplu yasami sevenler icin ikiz villalar, daha fazla mahremiyet isteyenler icin ise mustakil villalar sunuyoruz.',
+        available_4: '4 Adet Mevcut', twin_villa: 'Ikiz Villa', twin_label_text: 'Ortak avluya ve havuza dogrudan erisimi olan bitisik plan.', twin_text: 'Ikiz villalar yaklasik 375 m2 ic alana sahiptir; 5 yatak odasi, 2 salon, deniz manzarali cati terasi, 2 ana mutfak, 1 mini mutfak, kiler ve her kata hizmet veren ozel asansor icerir. Her ikiz villa projenin imza ic renk temalarindan birini takip eder.', twin_spec_bedrooms: '5 Yatak Odasi', twin_spec_bathrooms: '2 Salon', twin_spec_layout: '375 m2 Ic Alan',
+        twin_highlight_title: 'Tek cephede 4 ikiz villa', twin_highlight_text: 'Bu gorunum tum ikiz villa sirasini gosterir. Isaretli her alan bir villayi belirtir ve ziyaretcilerin 4 villayi tek bakista anlamasini saglar.',
+        twin_unit_1_badge: 'Ikiz Villa A', twin_unit_2_badge: 'Ikiz Villa B', twin_unit_3_badge: 'Ikiz Villa C', twin_unit_4_badge: 'Ikiz Villa D',
+        twin_unit_1_palette: 'Turkuaz ve Mavi', twin_unit_2_palette: 'Koyu Mavi', twin_unit_3_palette: 'Cesur Kirmizi', twin_unit_4_palette: 'Sicak Krem',
+        twin_unit_1_title: 'Turkuaz ve Mavi Renk Konsepti', twin_unit_1_text: 'Villa A taze turkuaz ve mavi paletiyle tasarlanmistir. Mobilyalar, dosemeler ve aksesuarlar bu tonlari tasir — canli, ferah ve sahil hissi veren bir ic mekan olusturur.',
+        twin_unit_2_title: 'Koyu Mavi Renk Konsepti', twin_unit_2_text: 'Villa B bastan sona koyu mavi tonlarla tanimlanir — kanepelerden koltuklar ve dekoratif detaylara kadar. Sonuc, sofistike bir atmosfere sahip sakin ve zarif bir ic mekandir.',
+        twin_unit_3_title: 'Cesur Kirmizi Renk Konsepti', twin_unit_3_text: 'Villa C zengin kirmizi duvar kagidi ve kirmizi tonlu kanepelerle carpici bir ifade yaratir. Sicak, enerjik palet bu ic mekana cesur bir karakter ve ayirt edici bir kisilik kazandirir.',
+        twin_unit_4_title: 'Sicak Krem Renk Konsepti', twin_unit_4_text: 'Villa D bastan sona yumusak bir krem paletiyle tasarlanmistir — krem duvar kagidi, notr tonlu kanepeler ve yataklar dingin, zamansiz bir ic mekan olusturur.',
+        twin_meta_living: 'Turkuaz mobilya', twin_meta_ready: 'Mavi aksesuarlar', twin_meta_salon: 'Mavi mobilya', twin_meta_family: 'Zarif ic mekan', twin_meta_dining: 'Kirmizi duvar kagidi', twin_meta_bright: 'Kirmizi kanepeler', twin_meta_storage: 'Krem duvar kagidi', twin_meta_private: 'Notr dosemeler', twin_meta_corner: '🏠 Kose konumu', twin_meta_pool: '🏊 Havuz manzarasi',
+        inquire: 'Bilgi Al', single_villa: 'Mustakil Villa', single_divider: 'Mustakil Villa', single_label_text: 'Bagimsiz yapi, genis cephe ve daha ozel dis mekan.', single_text: 'Villa E, ikiz villalarla ayni cömert plani takip eder; yaklasik 375 m2 ic alan, 5 yatak odasi, 2 salon, deniz manzarali cati terasi, birden fazla mutfak, ozel asansor erisimi ve yol kenarinda en bagimsiz kose konumu.', single_spec_bedrooms: '5 Yatak Odasi', single_spec_bathrooms: 'Ozel Asansor', single_spec_layout: '375 m2 Ic Alan',
+        villa_e_chip: 'Mustakil Villa E', villa_e_palette: 'Altin, Bej, Krem ve Ceviz', villa_e_title: 'Villa E — Altin, Bej ve Krem Karakterli Kose Konut', villa_e_text: 'Villa E, sitenin kosesinde yola paralel konumlanan bagimsiz mustakil villadir. Panoramik Beylikduzu deniz manzarasina acilir. Ic mekanlarda altin detayli masif ahsap mobilya, bej doseme, krem desenli duvar kaplamasi, sicak ceviz dolaplar, Siemens beyaz esya ve Mitsubishi klima sistemi bulunur.', villa_e_meta_corner: '🏠 Kose konumu', villa_e_meta_road: '🛣️ Yola cepheli', villa_e_meta_detached: '🛄 Tam bagimsiz', villa_e_meta_palette: '✨ Altin + bej palet',
+        amenities_label: 'Ozellikler ve Tesisler', amenities_title: 'Sosyal ve Wellness Tesisleri', amenities_text: 'Bu ortak tesisler ikiz ve mustakil villalar dahil tum siteye hizmet eder.',
+        amenity_pool_title: '3 Yuzme Havuzu', amenity_pool_text: 'Gunluk kullanim, aile zamani ve rahat dis mekan yasami icin site genelinde uc ayri havuz alani.', amenity_sauna_title: '2 Turk Hamami', amenity_sauna_text: 'Eksiksiz bir wellness rutini icin tasarlanmis ayri kadin ve erkek Turk hamamlari.', amenity_fitness_title: '2 Fitness Merkezi', amenity_fitness_text: 'Gunluk antrenman icin tam donanmli ayri kadin ve erkek fitness alanlari.', amenity_kitchen_title: '2 Dinlenme Salonu', amenity_kitchen_text: 'Wellness kullanimi oncesi veya sonrasi dinlenmek icin ayri kadin ve erkek salon alanlari.', amenity_bedroom_title: 'Ozel Peyzajli Bahceler', amenity_bedroom_text: 'Her villa, mahremiyet ve gunluk konfor saglayan peyzajli dis mekanlardan faydalanir.', amenity_washing_title: 'Ozel Otopark', amenity_washing_text: 'Her villaya pratik gunluk erisim icin ayri park yerleri tahsis edilmistir.', amenity_living_title: 'Otomatik Kepenk Sistemi', amenity_living_text: 'Evlerdeki motorlu kepenkler mahremiyet, konfor ve gunes kontrol destegi saglar.', amenity_garden_title: 'Merkezi Guvenlik', amenity_garden_text: 'Ozel guvenlik odasi ve merkezi site guvenligi guvenli site yasami destekler.',
+        gallery_label: 'Galeri', gallery_title: 'Villalari Gorun', gallery_text: 'Havuz, ic mekanlar ve tasinmaya hazir esyali alanlardan secilmis gorseller.', gallery_exterior: 'Dis Cephe', gallery_living: 'Salon', gallery_kitchen: 'Mutfak', gallery_bedroom: 'Ebeveyn Yatak Odasi', gallery_pool: 'Havuz Avlusu', gallery_bathroom: 'Banyo',
+        cta_label: 'Ilginizi cekti mi?', cta_title: 'Hayalinizdeki Villa Sizi Bekliyor', cta_text: 'Sahibinden uzerinden mevcut villalari inceleyin veya kisisel destek icin bize WhatsApp uzerinden ulasin.', chat_whatsapp: '💬 WhatsApp ile Yazisin',
+        location_label: 'Konum', location_title: 'Neredeyiz', location_text: 'Projemiz İstanbul Beylikdüzü\'nde, panoramik deniz manzarasina sahip bir konumdadir. Villaları ve cevreyi yerinde deneyimlemek icin sizi bekliyoruz.', map_title: 'MarbuVillas Konumu',
+        footer_brand_text: 'Premium anahtar teslim villalar — tamamen tamamlanmis, esyali ve sizin icin hazir.', footer_quick_links: 'Hizli Linkler', footer_property: 'Portfoy', footer_twin_villas: 'Ikiz Villalar', footer_single_villas: 'Mustakil Villalar', footer_contact: 'Iletisim', footer_whatsapp: 'WhatsApp', view_on_map: 'Haritada Gor', footer_rights: '© 2026 MarbuVillas. Tum haklari saklidir.', aria_whatsapp: 'WhatsApp', aria_sahibinden: 'Sahibinden'
+      },
+      ar: {
+        page_title: 'MarbuVillas - فلل فاخرة في إسطنبول جاهزة للسكن',
+        nav_about: 'عن المشروع', nav_villas: 'الفلل', nav_amenities: 'المزايا', nav_gallery: 'المعرض', nav_location: 'الموقع', nav_contact: 'تواصل معنا',
+        view_on_sahibinden_short: 'صاحبندن', view_on_sahibinden_arrow: 'اعرض في صاحبندن ←', view_on_sahibinden: 'اعرض في صاحبندن',
+        hero_badge: '✦ جاهزة للسكن - مفروشة بالكامل', hero_title: 'فلل فاخرة <br/><em>مصممة للحياة</em>', hero_text: 'اكتشف مجمع فللنا الحصري في بيليكدوزو، إسطنبول مع إطلالة بانورامية على البحر، 8 مساكن مفروشة بالكامل، موقع بمساحة 3,000 م²+، أجهزة Siemens وأنظمة تكييف Mitsubishi.',
+        explore_villas: 'استكشف الفلل', stat_total_villas: 'إجمالي الفلل', stat_twin_single: 'توأم ومستقلة', stat_fully_furnished: 'مفروشة بالكامل',
+        about_label: 'عن المشروع', about_title: 'تجربة سكن متكاملة', about_text: 'كل فيلا مصممة كمنزل عائلي متكامل بمساحة داخلية تقارب 375 م²، 5 غرف نوم، 2 صالون، جناح رئيسي مع تراس على السطح بإطلالة بحرية، 2 مطبخ رئيسي، مطبخ صغير، مخزن، مصعد خاص يخدم كل طابق، ونظام تكييف مركزي مدمج من Mitsubishi.',
+        feature_constructed_title: 'مكتملة البناء', feature_constructed_text: 'جميع الفلل الثماني مبنية ومفحوصة وجاهزة للسكن الفوري.',
+        feature_furnished_title: 'مفروشة بالكامل', feature_furnished_text: 'يشمل أثاث عالي الجودة وأسرة وتجهيزات مطبخ وأجهزة منزلية.',
+        feature_pool_title: 'منطقة مسبح خاصة', feature_pool_text: 'لكل فيلا وصول إلى المسبح مع مرافق عافية تحت الأرض.',
+        feature_fitness_title: 'ساونا ولياقة', feature_fitness_text: 'تقع أسفل المسبح وتوفر ساونا ومنطقة رياضية للسكان.',
+        feature_exterior_title: 'واجهة عصرية وساحة منسقة', feature_exterior_text: 'هندسة نظيفة ووصول إلى المسبح وموقع مكتمل وجاهز للاستخدام الفوري.',
+        feature_tech_title: 'تجهيزات تقنية فاخرة', feature_tech_text: 'أجهزة Siemens في جميع المطابخ وأنظمة تكييف Mitsubishi مثبتة في كافة الوحدات.',
+        about_caption_title: 'واجهة عصرية وساحة منسقة', about_caption_text: 'هندسة نظيفة ووصول إلى المسبح وموقع مكتمل وجاهز للاستخدام الفوري.',
+        villas_label: 'أنواع الفلل', villas_title: 'اختر الفيلا المناسبة لك', villas_text: 'نوفر نوعين من الفلل: فلل توأم لمحبي المجتمع وفلل مستقلة لمن يفضلون الخصوصية والمساحة.',
+        available_4: '4 متاحة', twin_villa: 'فيلا توأم', twin_label_text: 'تصميم متصل مع وصول مباشر إلى الساحة المشتركة والمسبح.', twin_text: 'توفر الفلل التوأم مساحة داخلية تقارب 375 م² مع 5 غرف نوم، 2 صالون، تراس سطحي بإطلالة بحرية، 2 مطبخ رئيسي، مطبخ صغير، مخزن، ومصعد خاص لكل طابق. تتبع كل فيلا أحد ألوان التصميم المميزة للمشروع.', twin_spec_bedrooms: '5 غرف نوم', twin_spec_bathrooms: '2 صالون', twin_spec_layout: '375 م² داخلي',
+        twin_highlight_title: 'أربع فلل توأم في واجهة واحدة', twin_highlight_text: 'تعرض هذه الواجهة صف فلل التوأم بالكامل. كل منطقة مميزة تمثل فيلا مستقلة حتى يفهم الزائر الوحدات الأربع بسرعة.',
+        twin_unit_1_badge: 'فيلا توأم A', twin_unit_2_badge: 'فيلا توأم B', twin_unit_3_badge: 'فيلا توأم C', twin_unit_4_badge: 'فيلا توأم D',
+        twin_unit_1_palette: 'فيروزي وأزرق', twin_unit_2_palette: 'أزرق داكن', twin_unit_3_palette: 'أحمر جريء', twin_unit_4_palette: 'كريمي دافئ',
+        twin_unit_1_title: 'مفهوم اللون الفيروزي والأزرق', twin_unit_1_text: 'فيلا A مصممة بلوحة ألوان فيروزية وزرقاء منعشة. الأثاث والتنجيد واللمسات تحمل هذه الألوان — لخلق تصميم داخلي نابض بالحياة بإحساس ساحلي.',
+        twin_unit_2_title: 'مفهوم اللون الأزرق الداكن', twin_unit_2_text: 'فيلا B تتميز بالأزرق الداكن في كل مكان — من الأرائك والكراسي إلى التفاصيل الزخرفية. النتيجة تصميم داخلي هادئ وأنيق بأجواء راقية.',
+        twin_unit_3_title: 'مفهوم اللون الأحمر الجريء', twin_unit_3_text: 'فيلا C تقدم بيانًا مميزًا بورق جدران أحمر غني وأرائك بدرجات الأحمر. اللوحة الدافئة والحيوية تمنح هذا التصميم شخصية جريئة ومميزة.',
+        twin_unit_4_title: 'مفهوم اللون الكريمي الدافئ', twin_unit_4_text: 'فيلا D تتبنى لوحة كريمية ناعمة — ورق جدران كريمي وأرائك وأسرة بألوان محايدة تخلق تصميمًا هادئًا وخالدًا.',
+        twin_meta_living: 'أثاث فيروزي', twin_meta_ready: 'لمسات زرقاء', twin_meta_salon: 'أثاث أزرق', twin_meta_family: 'تصميم أنيق', twin_meta_dining: 'ورق جدران أحمر', twin_meta_bright: 'أرائك حمراء', twin_meta_storage: 'ورق جدران كريمي', twin_meta_private: 'تأثيث محايد', twin_meta_corner: '🏠 موقع ركني', twin_meta_pool: '🏊 إطلالة المسبح',
+        inquire: 'استفسر', single_villa: 'فيلا مستقلة', single_divider: 'فيلا مستقلة', single_label_text: 'إحساس منفصل وواجهة أكبر وحضور خارجي أكثر خصوصية.', single_text: 'فيلا E تتبع نفس التخطيط السخي مع مساحة داخلية تقارب 375 م²، 5 غرف نوم، 2 صالون، تراس سطحي بإطلالة بحرية، مطابخ متعددة، مصعد خاص، وأكثر موقع زاوية مستقل بجانب الطريق.', single_spec_bedrooms: '5 غرف نوم', single_spec_bathrooms: 'مصعد خاص', single_spec_layout: '375 م² داخلي',
+        villa_e_chip: 'فيلا مستقلة E', villa_e_palette: 'ذهبي، بيج، كريمي وجوز', villa_e_title: 'فيلا E — مسكن ركني بطابع ذهبي وبيج وكريمي', villa_e_text: 'فيلا E هي الفيلا المستقلة الوحيدة، تقع في زاوية الموقع بالتوازي مع الطريق وتفتح على إطلالات بحرية بانورامية في بيليكدوزو. تجمع التصاميم الداخلية بين الأثاث الخشبي المصمت بتفاصيل ذهبية، والتنجيد البيج، وتشطيبات الجدران الكريمية، وخزائن الجوز الدافئة، وأجهزة Siemens، وتكييف Mitsubishi.', villa_e_meta_corner: '🏠 موقع ركني', villa_e_meta_road: '🛣️ مواجه للطريق', villa_e_meta_detached: '🛄 منفصلة بالكامل', villa_e_meta_palette: '✨ لوحة ذهبية وبيج',
+        amenities_label: 'المزايا والمرافق', amenities_title: 'مرافق اجتماعية وصحية', amenities_text: 'تخدم هذه المرافق المشتركة كامل المجمع بما في ذلك الفلل التوأم والمستقلة.',
+        amenity_pool_title: '3 مسابح', amenity_pool_text: 'ثلاث مناطق مسابح منفصلة عبر المجمع للاستخدام اليومي ووقت العائلة.', amenity_sauna_title: '2 حمام تركي', amenity_sauna_text: 'حمامات تركية منفصلة للرجال والنساء مصممة لروتين عافية متكامل.', amenity_fitness_title: '2 مركز لياقة', amenity_fitness_text: 'مساحات لياقة منفصلة للرجال والنساء مجهزة بالكامل للتدريب اليومي.', amenity_kitchen_title: '2 صالة استرخاء', amenity_kitchen_text: 'صالات منفصلة للرجال والنساء للاسترخاء قبل أو بعد استخدام العافية.', amenity_bedroom_title: 'حدائق منسقة خاصة', amenity_bedroom_text: 'تستفيد كل فيلا من مساحات خارجية منسقة تدعم الخصوصية والراحة اليومية.', amenity_washing_title: 'مواقف خاصة', amenity_washing_text: 'مواقف سيارات منفصلة مخصصة لكل فيلا للوصول اليومي العملي.', amenity_living_title: 'ستائر آلية', amenity_living_text: 'ستائر آلية في المنازل تدعم الخصوصية والراحة والتحكم بالشمس.', amenity_garden_title: 'أمن مركزي', amenity_garden_text: 'غرفة حراسة مخصصة وأمن مركزي للموقع يدعم حياة مجمع آمنة.',
+        gallery_label: 'المعرض', gallery_title: 'شاهد الفلل', gallery_text: 'مجموعة مختارة من أفضل اللقطات للمشروع بما في ذلك المسبح والداخلية والمساحات المفروشة.', gallery_exterior: 'الواجهة الخارجية', gallery_living: 'غرفة المعيشة', gallery_kitchen: 'المطبخ', gallery_bedroom: 'غرفة النوم الرئيسية', gallery_pool: 'ساحة المسبح', gallery_bathroom: 'الحمام',
+        cta_label: 'مهتم؟', cta_title: 'فيلا أحلامك بانتظارك', cta_text: 'تصفح الفلل المتاحة على صاحبندن أو تواصل معنا عبر واتساب للحصول على مساعدة شخصية.', chat_whatsapp: '💬 تحدث عبر واتساب',
+        location_label: 'الموقع', location_title: 'أين نحن', location_text: 'يقع المشروع في بيليكدوزو، إسطنبول مع إطلالات بانورامية على البحر. زر الموقع لتجربة المجمع والفلل والمنظر الساحلي المحيط شخصياً.', map_title: 'MarbuVillas الموقع',
+        footer_brand_text: 'فلل فاخرة جاهزة للسكن، مكتملة البناء ومفروشة بالكامل وجاهزة لك.', footer_quick_links: 'روابط سريعة', footer_property: 'العقار', footer_twin_villas: 'فلل توأم', footer_single_villas: 'فلل مستقلة', footer_contact: 'التواصل', footer_whatsapp: 'واتساب', view_on_map: 'اعرض على الخريطة', footer_rights: '© 2026 MarbuVillas. جميع الحقوق محفوظة.', aria_whatsapp: 'واتساب', aria_sahibinden: 'صاحبندن'
+      },
+      ru: {
+        page_title: 'MarbuVillas — премиальные виллы в Стамбуле, готовые к заселению',
+        nav_about: 'О проекте', nav_villas: 'Виллы', nav_amenities: 'Удобства', nav_gallery: 'Галерея', nav_location: 'Локация', nav_contact: 'Контакты',
+        view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'Смотреть на Sahibinden →', view_on_sahibinden: 'Смотреть на Sahibinden',
+        hero_badge: '✦ Готово к заселению — полностью меблировано', hero_title: 'Премиальные виллы <br/><em>для комфортной жизни</em>', hero_text: 'Откройте для себя наш эксклюзивный комплекс вилл в Бейликдюзю, Стамбул с панорамным видом на море, 8 полностью меблированных резиденций, участком 3 000 м²+, техникой Siemens и климатическими системами Mitsubishi.',
+        explore_villas: 'Посмотреть виллы', stat_total_villas: 'Всего вилл', stat_twin_single: 'Таунхаусы и отдельные', stat_fully_furnished: 'Полностью меблировано',
+        about_label: 'О проекте', about_title: 'Жизнь под ключ', about_text: 'Каждая вилла спроектирована как полноценная семейная резиденция с площадью около 375 м², 5 спальнями, 2 гостиными, мастер-сьютом с террасой на крыше и видом на море, 2 основными кухнями, мини-кухней, кладовой, личным лифтом и встроенной центральной системой кондиционирования Mitsubishi.',
+        feature_constructed_title: 'Полностью построено', feature_constructed_text: 'Все 8 вилл построены, проверены и готовы к немедленному заселению.',
+        feature_furnished_title: 'Полностью меблировано', feature_furnished_text: 'Качественная мебель, кровати, кухонное оборудование и техника уже включены.',
+        feature_pool_title: 'Частная зона бассейна', feature_pool_text: 'У каждой виллы есть доступ к бассейну и wellness-зоне под ним.',
+        feature_fitness_title: 'Сауна и фитнес', feature_fitness_text: 'Под бассейном расположены сауна и спортивная зона для жителей.',
+        about_caption_title: 'Современный фасад и благоустроенный двор', about_caption_text: 'Чистая архитектура, доступ к бассейну и полностью готовая территория.',
+        feature_exterior_title: 'Современный фасад и благоустроенный двор', feature_exterior_text: 'Чистая архитектура, доступ к бассейну и полностью готовая территория.', feature_tech_title: 'Премиальное техническое оснащение', feature_tech_text: 'Кухни с техникой Siemens и климатические системы Mitsubishi во всех резиденциях.',
+        villas_label: 'Типы вилл', villas_title: 'Выберите идеальную виллу', villas_text: 'Мы предлагаем два типа: таунхаусы для любителей соседского сообщества и отдельные виллы для максимальной приватности.',
+        available_4: 'Доступно 4', twin_villa: 'Таунхаус', twin_label_text: 'Смежная планировка с прямым выходом во внутренний двор и к бассейну.', twin_text: 'Таунхаусы предлагают около 375 м² внутренней площади с 5 спальнями, 2 гостиными, террасой на крыше с видом на море, 2 основными кухнями, мини-кухней, кладовой и личным лифтом. Каждый таунхаус выполнен в одном из фирменных цветов проекта.', twin_spec_bedrooms: '5 спален', twin_spec_bathrooms: '2 гостиные', twin_spec_layout: '375 м² интерьер',
+        twin_highlight_title: 'Четыре таунхауса на одном фасаде', twin_highlight_text: 'Этот фасад показывает весь ряд таунхаусов. Каждая подсвеченная зона обозначает отдельную виллу.',
+        twin_unit_1_badge: 'Таунхаус A', twin_unit_2_badge: 'Таунхаус B', twin_unit_3_badge: 'Таунхаус C', twin_unit_4_badge: 'Таунхаус D',
+        twin_unit_1_palette: 'Бирюзовый и синий', twin_unit_2_palette: 'Тёмно-синий', twin_unit_3_palette: 'Яркий красный', twin_unit_4_palette: 'Тёплый кремовый',
+        twin_unit_1_title: 'Бирюзово-синяя цветовая концепция', twin_unit_1_text: 'Вилла A оформлена в свежей бирюзово-синей палитре. Мебель, обивка и акценты выдержаны в этих тонах — создавая яркий, воздушный интерьер с прибрежным настроением.',
+        twin_unit_2_title: 'Тёмно-синяя цветовая концепция', twin_unit_2_text: 'Вилла B определяется глубокими синими тонами — от диванов и кресел до декоративных деталей. Результат — спокойный, элегантный интерьер с утончённой атмосферой.',
+        twin_unit_3_title: 'Яркая красная цветовая концепция', twin_unit_3_text: 'Вилла C создаёт яркое впечатление насыщенными красными обоями и красными диванами. Тёплая, энергичная палитра придаёт интерьеру смелый характер.',
+        twin_unit_4_title: 'Тёплая кремовая цветовая концепция', twin_unit_4_text: 'Вилла D выполнена в мягкой кремовой палитре — кремовые обои, диваны и кровати нейтральных тонов создают умиротворённый, вневременной интерьер.',
+        twin_meta_living: 'Бирюзовая мебель', twin_meta_ready: 'Синие акценты', twin_meta_salon: 'Синяя мебель', twin_meta_family: 'Элегантный интерьер', twin_meta_dining: 'Красные обои', twin_meta_bright: 'Красные диваны', twin_meta_storage: 'Кремовые обои', twin_meta_private: 'Нейтральная обстановка', twin_meta_corner: '🏠 Угловое расположение', twin_meta_pool: '🏊 Вид на бассейн',
+        inquire: 'Связаться', single_villa: 'Отдельная вилла', single_divider: 'Отдельная вилла', single_label_text: 'Больше фасада и более приватное внешнее пространство.', single_text: 'Вилла E следует тому же планировочному решению — около 375 м² внутренней площади, 5 спален, 2 гостиные, терраса на крыше с видом на море, несколько кухонь, личный лифт и самое независимое угловое расположение у дороги.', single_spec_bedrooms: '5 спален', single_spec_bathrooms: 'Личный лифт', single_spec_layout: '375 м² интерьер',
+        villa_e_chip: 'Отдельная вилла E', villa_e_palette: 'Золото, Тауп, Крем и Орех', villa_e_title: 'Вилла E — угловая резиденция в золотых, таупных и кремовых тонах', villa_e_text: 'Вилла E — единственная отдельная вилла, расположенная в углу участка параллельно дороге с панорамным видом на море в Бейликдюзю. Интерьер сочетает массивную деревянную мебель с золотыми деталями, таупную обивку, кремовые стены, ореховые шкафы, технику Siemens и кондиционирование Mitsubishi.', villa_e_meta_corner: '🏠 Угловое расположение', villa_e_meta_road: '🛣️ Выход на дорогу', villa_e_meta_detached: '🛄 Полностью отдельная', villa_e_meta_palette: '✨ Золотая и таупная палитра',
+        amenities_label: 'Удобства и услуги', amenities_title: 'Социальные и wellness-удобства', amenities_text: 'Общие объекты обслуживают весь комплекс, включая таунхаусы и отдельные виллы.',
+        amenity_pool_title: '3 бассейна', amenity_pool_text: 'Три отдельные зоны бассейнов по всему комплексу для ежедневного отдыха.', amenity_sauna_title: '2 турецкие бани', amenity_sauna_text: 'Раздельные турецкие бани для мужчин и женщин для полноценного wellness-отдыха.', amenity_fitness_title: '2 фитнес-центра', amenity_fitness_text: 'Раздельные мужские и женские фитнес-зоны с полным оборудованием.', amenity_kitchen_title: '2 лаунж-зоны', amenity_kitchen_text: 'Раздельные зоны отдыха для мужчин и женщин до или после wellness-процедур.', amenity_bedroom_title: 'Ландшафтные сады', amenity_bedroom_text: 'Каждая вилла имеет озеленённое пространство для приватности и комфорта.', amenity_washing_title: 'Частная парковка', amenity_washing_text: 'Отдельные парковочные места для каждой виллы.', amenity_living_title: 'Автоматические ставни', amenity_living_text: 'Моторизованные ставни для приватности, комфорта и контроля солнечного света.', amenity_garden_title: 'Центральная охрана', amenity_garden_text: 'Выделенная охранная комната и централизованная служба безопасности.',
+        gallery_label: 'Галерея', gallery_title: 'Посмотрите виллы', gallery_text: 'Подборка лучших видов проекта, включая бассейн, интерьеры и готовые меблированные пространства.', gallery_exterior: 'Фасад', gallery_living: 'Гостиная', gallery_kitchen: 'Кухня', gallery_bedroom: 'Главная спальня', gallery_pool: 'Двор с бассейном', gallery_bathroom: 'Ванная',
+        cta_label: 'Заинтересованы?', cta_title: 'Вилла вашей мечты ждет вас', cta_text: 'Посмотрите доступные виллы на Sahibinden или напишите нам в WhatsApp для персональной помощи.', chat_whatsapp: '💬 Написать в WhatsApp',
+        location_label: 'Локация', location_title: 'Где мы находимся', location_text: 'Проект расположен в Бейликдюзю, Стамбул с панорамным видом на море. Посетите нас лично, чтобы оценить комплекс, планировки вилл и прибрежную перспективу.', map_title: 'MarbuVillas Расположение',
+        footer_brand_text: 'Премиальные виллы под ключ — полностью построены, меблированы и готовы для вас.', footer_quick_links: 'Быстрые ссылки', footer_property: 'Объект', footer_twin_villas: 'Таунхаусы', footer_single_villas: 'Отдельные виллы', footer_contact: 'Контакты', footer_whatsapp: 'WhatsApp', view_on_map: 'Открыть на карте', footer_rights: '© 2026 MarbuVillas. Все права защищены.', aria_whatsapp: 'WhatsApp', aria_sahibinden: 'Sahibinden'
+      },
+      zh: {
+        page_title: 'MarbuVillas - 伊斯坦布尔即买即住的高端别墅',
+        nav_about: '项目介绍', nav_villas: '别墅', nav_amenities: '配套', nav_gallery: '图库', nav_location: '位置', nav_contact: '联系我们',
+        view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: '在 Sahibinden 查看 →', view_on_sahibinden: '在 Sahibinden 查看',
+        hero_badge: '✦ 即可入住 - 全套家具', hero_title: '高端别墅 <br/><em>为生活而建</em>', hero_text: '探索我们位于伊斯坦布尔Beylikdüzü的独家别墅项目，拥有全景海景、8套全装修住宅、3,000平方米+园区、西门子电器及三菱中央空调系统。',
+        explore_villas: '查看别墅', stat_total_villas: '别墅总数', stat_twin_single: '双拼与独栋', stat_fully_furnished: '全套家具',
+        about_label: '项目介绍', about_title: '拎包入住的生活体验', about_text: '每套别墅均按全尺寸家庭住宅设计，室内面积约375平方米，5间卧室、2间客厅、带海景屋顶露台的主卧套房、2个主厨房、1个迷你厨房、储藏室、服务每层的私人电梯，以及内置三菱中央空调系统。',
+        feature_constructed_title: '已全部建成', feature_constructed_text: '全部8套别墅均已建成、验收并可立即入住。',
+        feature_furnished_title: '全套家具', feature_furnished_text: '包含高品质家具、床具、厨房设备和家电。',
+        feature_pool_title: '私人泳池区域', feature_pool_text: '每套别墅都可使用泳池及地下康养设施。',
+        feature_fitness_title: '桑拿与健身', feature_fitness_text: '位于泳池下方，为住户提供桑拿和运动空间。',
+        about_caption_title: '现代外立面与景观庭院', about_caption_text: '简洁建筑风格、泳池通达性以及可立即使用的完整社区环境。',
+        feature_exterior_title: '现代外立面与景观庭院', feature_exterior_text: '简洁建筑风格、泳池通达性以及可立即使用的完整社区环境。', feature_tech_title: '高端技术设备', feature_tech_text: '厨房配备西门子电器，所有住宅均安装三菱中央空调系统。',
+        villas_label: '别墅类型', villas_title: '选择适合您的别墅', villas_text: '我们提供两种别墅类型：适合喜欢社区氛围的双拼别墅，以及更注重私密性的独栋别墅。',
+        available_4: '4套可选', twin_villa: '双拼别墅', twin_label_text: '连体布局，可直接通往共享庭院和泳池。', twin_text: '双拼别墅提供约375平方米室内空间，含5间卧室、2间客厅、海景屋顶露台、2个主厨房、1个迷你厨房、储藏室及每层私人电梯。每套双拼别墅采用项目标志性室内色彩主题之一。', twin_spec_bedrooms: '5间卧室', twin_spec_bathrooms: '2间客厅', twin_spec_layout: '375平方米室内',
+        twin_highlight_title: '一张立面图展示4套双拼别墅', twin_highlight_text: '这张立面图展示了整排双拼别墅。每个高亮区域对应一套别墅。',
+        twin_unit_1_badge: '双拼别墅 A', twin_unit_2_badge: '双拼别墅 B', twin_unit_3_badge: '双拼别墅 C', twin_unit_4_badge: '双拼别墅 D',
+        twin_unit_1_palette: '绿松石与蓝色', twin_unit_2_palette: '深蓝色', twin_unit_3_palette: '大胆红色', twin_unit_4_palette: '温暖奶油色',
+        twin_unit_1_title: '绿松石与蓝色配色概念', twin_unit_1_text: 'Villa A采用清新的绿松石和蓝色调。家具、织物和装饰均延续这些色调——营造出充满活力、通透的海岸风格内饰。',
+        twin_unit_2_title: '深蓝色配色概念', twin_unit_2_text: 'Villa B以深蓝色调贯穿始终——从沙发、扶手椅到装饰细节。营造出沉稳、优雅且精致的室内氛围。',
+        twin_unit_3_title: '大胆红色配色概念', twin_unit_3_text: 'Villa C以浓郁的红色壁纸和红色调沙发营造出鲜明的视觉效果。温暖而充满活力的色调赋予室内大胆的个性。',
+        twin_unit_4_title: '温暖奶油色配色概念', twin_unit_4_text: 'Villa D全面采用柔和的奶油色调——奶油色壁纸、中性色调的沙发和床具，营造出宁静、经典的室内设计。',
+        twin_meta_living: '绿松石家具', twin_meta_ready: '蓝色点缀', twin_meta_salon: '蓝色家具', twin_meta_family: '优雅内饰', twin_meta_dining: '红色壁纸', twin_meta_bright: '红色沙发', twin_meta_storage: '奶油色壁纸', twin_meta_private: '中性家具', twin_meta_corner: '🏠 转角位置', twin_meta_pool: '🏊 泳池景观',
+        inquire: '咨询', single_villa: '独栋别墅', single_divider: '独栋别墅', single_label_text: '更大的外立面和更强的户外私密感。', single_text: 'Villa E遵循相同的宽敞规划，约375平方米室内空间，5间卧室、2间客厅、海景屋顶露台、多个厨房、私人电梯，以及靠近道路的最独立转角位置。', single_spec_bedrooms: '5间卧室', single_spec_bathrooms: '私人电梯', single_spec_layout: '375平方米室内',
+        villa_e_chip: '独栋别墅 E', villa_e_palette: '金色、灰褐、奶油与胡桃木', villa_e_title: '别墅 E — 金色、灰褐与奶油色调的转角住宅', villa_e_text: '别墅 E 是唯一的独栋别墅，位于地块转角处，与道路平行，尽享贝伊利克杜兹的全景海景。室内设计融合了带金色细节的实木家具、灰褐色软装、奶油色墙面、核桃木衣柜、西门子电器和三菱空调。', villa_e_meta_corner: '🏠 转角位置', villa_e_meta_road: '🛣️ 临路', villa_e_meta_detached: '🛄 完全独立', villa_e_meta_palette: '✨ 金色与灰褐色调',
+        amenities_label: '配套与特色', amenities_title: '社交与健康设施', amenities_text: '这些共享设施服务于包括双拼和独栋别墅在内的整个园区。',
+        amenity_pool_title: '3个游泳池', amenity_pool_text: '园区内三个独立泳池区域，满足日常使用和家庭休闲。', amenity_sauna_title: '2个土耳其浴室', amenity_sauna_text: '男女分开的土耳其浴室，提供完整的健康护理体验。', amenity_fitness_title: '2个健身中心', amenity_fitness_text: '男女分开的健身区域，配备齐全的日常训练设备。', amenity_kitchen_title: '2个休闲室', amenity_kitchen_text: '男女分开的休闲区域，可在健康活动前后放松。', amenity_bedroom_title: '私人景观花园', amenity_bedroom_text: '每套别墅都享有景观绿化的户外空间，保障隐私和日常舒适。', amenity_washing_title: '私人停车位', amenity_washing_text: '每套别墅分配独立停车位，方便日常出行。', amenity_living_title: '自动窗帘系统', amenity_living_text: '电动窗帘系统提供隐私保护、舒适度和遮阳控制。', amenity_garden_title: '中央安保', amenity_garden_text: '专用保安室和集中安保系统，保障园区安全生活。',
+        gallery_label: '图库', gallery_title: '查看别墅', gallery_text: '精选项目最佳视角，包括泳池、室内空间和可即刻入住的家具配置。', gallery_exterior: '外立面', gallery_living: '客厅', gallery_kitchen: '厨房', gallery_bedroom: '主卧', gallery_pool: '泳池庭院', gallery_bathroom: '浴室',
+        cta_label: '感兴趣？', cta_title: '您的理想别墅正在等您', cta_text: '可在 Sahibinden 浏览可售别墅，或通过 WhatsApp 直接联系我们获取专属帮助。', chat_whatsapp: '💬 WhatsApp 咨询',
+        location_label: '位置', location_title: '我们的位置', location_text: '项目位于伊斯坦布尔Beylikdüzü，尽享全景海景。欢迎实地参观别墅项目，亲自体验园区布局与海岸风光。', map_title: 'MarbuVillas 位置',
+        footer_brand_text: '高端拎包入住别墅，已建成、已配齐家具、已准备好迎接您。', footer_quick_links: '快捷链接', footer_property: '房源', footer_twin_villas: '双拼别墅', footer_single_villas: '独栋别墅', footer_contact: '联系', footer_whatsapp: 'WhatsApp', view_on_map: '地图查看', footer_rights: '© 2026 MarbuVillas. 保留所有权利。', aria_whatsapp: 'WhatsApp', aria_sahibinden: 'Sahibinden'
+      }
+    };
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+    }
+
+    const languageSelect = document.getElementById('languageSelect');
+    const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');
+
+    function applyLanguage(lang) {
+      const dictionary = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.title = dictionary.page_title;
+
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        if (dictionary[key]) {
+          element.textContent = dictionary[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+        const key = element.dataset.i18nHtml;
+        if (dictionary[key]) {
+          element.innerHTML = dictionary[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+        const key = element.dataset.i18nTitle;
+        if (dictionary[key]) {
+          element.title = dictionary[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+        const key = element.dataset.i18nAriaLabel;
+        if (dictionary[key]) {
+          element.setAttribute('aria-label', dictionary[key]);
+        }
+      });
+
+      if (languageSelect) languageSelect.value = lang;
+      if (mobileLanguageSelect) mobileLanguageSelect.value = lang;
+      localStorage.setItem('villa-language', lang);
+    }
+
+    function handleLanguageChange(event) {
+      applyLanguage(event.target.value);
+    }
+
+    if (languageSelect) {
+      languageSelect.addEventListener('change', handleLanguageChange);
+    }
+    if (mobileLanguageSelect) {
+      mobileLanguageSelect.addEventListener('change', handleLanguageChange);
+    }
+
+    applyLanguage(localStorage.getItem('villa-language') || 'en');
+
+    // Smooth reveal on scroll
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+
+    // Make hero always visible
+    document.querySelector('.hero').style.opacity = '1';
+    document.querySelector('.hero').style.transform = 'none';
+  </script>
+
+  <!-- GA4 Custom Event Tracking -->
+  <script>
+    // Track WhatsApp clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'contact',
+          event_label: this.closest('.whatsapp-float') ? 'floating_button' : 
+                        this.closest('.cta') ? 'cta_section' : 'footer'
+        });
+      });
+    });
+
+    // Track Sahibinden clicks
+    document.querySelectorAll('a[href*="sahibinden"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'sahibinden_click', {
+          event_category: 'external_link',
+          event_label: this.textContent.trim()
+        });
+      });
+    });
+
+    // Track language switches
+    document.getElementById('languageSelect').addEventListener('change', function() {
+      gtag('event', 'language_change', {
+        event_category: 'engagement',
+        event_label: this.value
+      });
+    });
+    document.getElementById('mobileLanguageSelect').addEventListener('change', function() {
+      gtag('event', 'language_change', {
+        event_category: 'engagement',
+        event_label: this.value
+      });
+    });
+
+    // Track nav clicks
+    document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'nav_click', {
+          event_category: 'navigation',
+          event_label: this.getAttribute('href')
+        });
+      });
+    });
+
+    // Track villa inquire button clicks
+    document.querySelectorAll('.villa-card-actions a').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'villa_inquire', {
+          event_category: 'engagement',
+          event_label: this.closest('.villa-card').querySelector('h3').textContent.trim()
+        });
+      });
+    });
+
+    // Track email link clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'email_click', {
+          event_category: 'contact',
+          event_label: this.href
+        });
+      });
+    });
+
+    // Track scroll depth
+    var scrollThresholds = [25, 50, 75, 100];
+    var scrollFired = {};
+    window.addEventListener('scroll', function() {
+      var scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollThresholds.forEach(function(threshold) {
+        if (scrollPercent >= threshold && !scrollFired[threshold]) {
+          scrollFired[threshold] = true;
+          gtag('event', 'scroll_depth', {
+            event_category: 'engagement',
+            event_label: threshold + '%'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
