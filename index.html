@@ -938,6 +938,19 @@
       color: #fff;
     }
     .btn-outline-white:hover { border-color: #fff; }
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      border: 2px solid #25d366;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+    .btn-whatsapp:hover {
+      background: #128c7e;
+      border-color: #128c7e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    }
 
     /* ===== MAP ===== */
     .map-section { background: #fff; padding-bottom: 0; }
@@ -1399,7 +1412,7 @@
         <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
         <a href="#location" data-i18n="nav_location">Location</a>
         <a href="#booking" data-i18n="nav_booking">Book Visit</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#cta" data-i18n="nav_contact">💬 WhatsApp</a>
       </div>
       <div class="nav-actions">
         <select class="language-select" id="languageSelect" aria-label="Language selector">
@@ -1424,7 +1437,7 @@
     <a href="#gallery" onclick="closeMobileMenu()" data-i18n="nav_gallery">Gallery</a>
     <a href="#location" onclick="closeMobileMenu()" data-i18n="nav_location">Location</a>
     <a href="#booking" onclick="closeMobileMenu()" data-i18n="nav_booking">Book Visit</a>
-    <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
+    <a href="#cta" onclick="closeMobileMenu()" data-i18n="nav_contact">💬 WhatsApp</a>
     <select class="mobile-language-select" id="mobileLanguageSelect" aria-label="Language selector">
       <option value="en">English</option>
       <option value="tr">Turkce</option>
@@ -1804,13 +1817,13 @@
   </section>
 
   <!-- CTA -->
-  <section class="section cta" id="contact">
+  <section class="section cta" id="cta">
     <div class="container">
       <div class="section-label" data-i18n="cta_label">Interested?</div>
       <h2 class="section-title" data-i18n="cta_title">Your Dream Villa Awaits</h2>
       <p class="section-subtitle" data-i18n="cta_text">Reach out to us directly via WhatsApp for personalized assistance.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/905335918230" target="_blank" rel="noopener" class="btn btn-outline-white">
+        <a href="https://wa.me/905335918230" target="_blank" rel="noopener" class="btn btn-whatsapp">
           <span data-i18n="chat_whatsapp">💬 Chat on WhatsApp</span>
         </a>
       </div>
@@ -1975,11 +1988,11 @@
     const translations = {
       en: {
         page_title: 'MarbuVillas — Premium Villas in Istanbul, Ready to Move In',
-        nav_about: 'About', nav_villas: 'Villas', nav_amenities: 'Amenities', nav_gallery: 'Gallery', nav_location: 'Location', nav_booking: 'Book Visit', nav_contact: 'Contact',
+        nav_about: 'About', nav_villas: 'Villas', nav_amenities: 'Amenities', nav_gallery: 'Gallery', nav_location: 'Location', nav_booking: 'Book Visit', nav_contact: 'WhatsApp',
         view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'View on Sahibinden →', view_on_sahibinden: 'View on Sahibinden',
         hero_badge: '✦ Ready to Move In — Fully Furnished', hero_title: 'Premium Villas <br/><em>Built for Living</em>', hero_text: 'Discover our exclusive villa compound in Beylikdüzü, Istanbul with panoramic sea views, 8 fully furnished residences, a 3,000 m² site, Siemens appliances, and Mitsubishi climate systems throughout.',
         explore_villas: 'Explore Villas', stat_total_villas: 'Total Villas', stat_twin_single: 'Twin & Single', stat_fully_furnished: 'Fully Furnished',
-        about_label: 'About the Project', about_title: 'A Turnkey Living Experience', about_text: 'Each villa is designed as a full-scale family residence with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, 1 master suite with a sea-view rooftop terrace, 2 main kitchens, 1 mini kitchen, a pantry, a private elevator serving every floor, and a built-in Mitsubishi central air conditioning system throughout.',
+        about_label: 'About the Project', about_title: 'A Turnkey Living Experience', about_text: 'Located in a prime position with stunning sea views, each villa is designed as a full-scale family residence with approximately 375 m2 of interior space, 5 bedrooms, 2 living rooms, 1 master suite with a sea-view rooftop terrace, 2 main kitchens, 1 mini kitchen, a pantry, a private elevator serving every floor, and a built-in Mitsubishi central air conditioning system throughout.',
         feature_constructed_title: 'Fully Constructed', feature_constructed_text: 'All 8 villas are built, inspected, and ready for immediate occupancy.',
         feature_furnished_title: 'Fully Furnished', feature_furnished_text: 'High-quality furniture, beds, kitchen equipment, and appliances included.',
         feature_pool_title: 'Private Pool Area', feature_pool_text: 'Each villa has access to a pool with underground wellness facilities.',
@@ -2015,11 +2028,11 @@
       },
       tr: {
         page_title: 'MarbuVillas — İstanbul\'da Tasinmaya Hazir Premium Villalar',
-        nav_about: 'Proje', nav_villas: 'Villalar', nav_amenities: 'Ozellikler', nav_gallery: 'Galeri', nav_location: 'Konum', nav_booking: 'Ziyaret Randevusu', nav_contact: 'Iletisim',
+        nav_about: 'Proje', nav_villas: 'Villalar', nav_amenities: 'Ozellikler', nav_gallery: 'Galeri', nav_location: 'Konum', nav_booking: 'Ziyaret Randevusu', nav_contact: 'WhatsApp',
         view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'Sahibinden ilanini gor →', view_on_sahibinden: 'Sahibinden ilanini gor',
         hero_badge: '✦ Tasinmaya Hazir — Tam Esyali', hero_title: 'Premium Villalar <br/><em>Yasamak Icin Tasarlandi</em>', hero_text: 'İstanbul Beylikdüzü\'nde panoramik deniz manzarali ozel villa projemizi kesfedin. 8 tam esyali rezidans, 3.000 m²+ arazi, Siemens beyaz esya ve Mitsubishi klima sistemleri.',
         explore_villas: 'Villalari Incele', stat_total_villas: 'Toplam Villa', stat_twin_single: 'Ikiz ve Mustakil', stat_fully_furnished: 'Tam Esyali',
-        about_label: 'Proje Hakkinda', about_title: 'Anahtar Teslim Yasam Deneyimi', about_text: 'Villa projemiz, zahmetsizce yeni bir hayata adim atmak isteyenler icin tasarlandi. Her villa tamamlanmis, esyalanmis ve ihtiyaciniz olan her seyle donatilmistir. Tum villalarda Mitsubishi merkezi klima sistemi yerlesik olarak mevcuttur.',
+        about_label: 'Proje Hakkinda', about_title: 'Anahtar Teslim Yasam Deneyimi', about_text: 'İstanbul\'un en guzel konumunda muhtesem deniz manzarasiyla konumlanan her villa, tam boyutlu bir aile konutu olarak tasarlanmistir. Yaklasik 375 m² ic mekan alani, 5 yatak odasi, 2 oturma odasi, deniz manzarali cat terasi bulunan 1 master suite, 2 ana mutfak, 1 mini mutfak, kiler, her kati hizmet eden ozel asansor ve tum birimlerde yerlesik Mitsubishi merkezi klima sistemi ile donatilmistir.',
         feature_constructed_title: 'Tamamlanmis Yapi', feature_constructed_text: 'Tum 8 villa insa edilmis, kontrol edilmis ve hemen oturuma hazirdir.',
         feature_furnished_title: 'Tam Esyali', feature_furnished_text: 'Kaliteli mobilya, yatak, mutfak ekipmani ve beyaz esyalar dahildir.',
         feature_pool_title: 'Ozel Havuz Alani', feature_pool_text: 'Her villanin, altta wellness alanlari bulunan havuza erisimi vardir.',
@@ -2055,11 +2068,11 @@
       },
       ar: {
         page_title: 'MarbuVillas - فلل فاخرة في إسطنبول جاهزة للسكن',
-        nav_about: 'عن المشروع', nav_villas: 'الفلل', nav_amenities: 'المزايا', nav_gallery: 'المعرض', nav_location: 'الموقع', nav_booking: 'احجز زيارة', nav_contact: 'تواصل معنا',
+        nav_about: 'عن المشروع', nav_villas: 'الفلل', nav_amenities: 'المزايا', nav_gallery: 'المعرض', nav_location: 'الموقع', nav_booking: 'احجز زيارة', nav_contact: 'WhatsApp',
         view_on_sahibinden_short: 'صاحبندن', view_on_sahibinden_arrow: 'اعرض في صاحبندن ←', view_on_sahibinden: 'اعرض في صاحبندن',
         hero_badge: '✦ جاهزة للسكن - مفروشة بالكامل', hero_title: 'فلل فاخرة <br/><em>مصممة للحياة</em>', hero_text: 'اكتشف مجمع فللنا الحصري في بيليكدوزو، إسطنبول مع إطلالة بانورامية على البحر، 8 مساكن مفروشة بالكامل، موقع بمساحة 3,000 م²+، أجهزة Siemens وأنظمة تكييف Mitsubishi.',
         explore_villas: 'استكشف الفلل', stat_total_villas: 'إجمالي الفلل', stat_twin_single: 'توأم ومستقلة', stat_fully_furnished: 'مفروشة بالكامل',
-        about_label: 'عن المشروع', about_title: 'تجربة سكن متكاملة', about_text: 'كل فيلا مصممة كمنزل عائلي متكامل بمساحة داخلية تقارب 375 م²، 5 غرف نوم، 2 صالون، جناح رئيسي مع تراس على السطح بإطلالة بحرية، 2 مطبخ رئيسي، مطبخ صغير، مخزن، مصعد خاص يخدم كل طابق، ونظام تكييف مركزي مدمج من Mitsubishi.',
+        about_label: 'عن المشروع', about_title: 'تجربة سكن متكاملة', about_text: 'تقع في موقع متميز مع إطلالة بحرية خلابة، كل فيلا مصممة كمنزل عائلي متكامل بمساحة داخلية تقارب 375 م²، 5 غرف نوم، 2 صالون، جناح رئيسي مع تراس على السطح بإطلالة بحرية، 2 مطبخ رئيسي، مطبخ صغير، مخزن، مصعد خاص يخدم كل طابق، ونظام تكييف مركزي مدمج من Mitsubishi.',
         feature_constructed_title: 'مكتملة البناء', feature_constructed_text: 'جميع الفلل الثماني مبنية ومفحوصة وجاهزة للسكن الفوري.',
         feature_furnished_title: 'مفروشة بالكامل', feature_furnished_text: 'يشمل أثاث عالي الجودة وأسرة وتجهيزات مطبخ وأجهزة منزلية.',
         feature_pool_title: 'منطقة مسبح خاصة', feature_pool_text: 'لكل فيلا وصول إلى المسبح مع مرافق عافية تحت الأرض.',
@@ -2095,11 +2108,11 @@
       },
       ru: {
         page_title: 'MarbuVillas — премиальные виллы в Стамбуле, готовые к заселению',
-        nav_about: 'О проекте', nav_villas: 'Виллы', nav_amenities: 'Удобства', nav_gallery: 'Галерея', nav_location: 'Локация', nav_booking: 'Записаться на просмотр', nav_contact: 'Контакты',
+        nav_about: 'О проекте', nav_villas: 'Виллы', nav_amenities: 'Удобства', nav_gallery: 'Галерея', nav_location: 'Локация', nav_booking: 'Записаться на просмотр', nav_contact: 'WhatsApp',
         view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: 'Смотреть на Sahibinden →', view_on_sahibinden: 'Смотреть на Sahibinden',
         hero_badge: '✦ Готово к заселению — полностью меблировано', hero_title: 'Премиальные виллы <br/><em>для комфортной жизни</em>', hero_text: 'Откройте для себя наш эксклюзивный комплекс вилл в Бейликдюзю, Стамбул с панорамным видом на море, 8 полностью меблированных резиденций, участком 3 000 м²+, техникой Siemens и климатическими системами Mitsubishi.',
         explore_villas: 'Посмотреть виллы', stat_total_villas: 'Всего вилл', stat_twin_single: 'Таунхаусы и отдельные', stat_fully_furnished: 'Полностью меблировано',
-        about_label: 'О проекте', about_title: 'Жизнь под ключ', about_text: 'Каждая вилла спроектирована как полноценная семейная резиденция с площадью около 375 м², 5 спальнями, 2 гостиными, мастер-сьютом с террасой на крыше и видом на море, 2 основными кухнями, мини-кухней, кладовой, личным лифтом и встроенной центральной системой кондиционирования Mitsubishi.',
+        about_label: 'О проекте', about_title: 'Жизнь под ключ', about_text: 'Расположена в привилегированном месте с потрясающим видом на море, каждая вилла спроектирована как полноценная семейная резиденция с площадью около 375 м², 5 спальнями, 2 гостиными, мастер-сьютом с террасой на крыше и видом на море, 2 основными кухнями, мини-кухней, кладовой, личным лифтом и встроенной центральной системой кондиционирования Mitsubishi.',
         feature_constructed_title: 'Полностью построено', feature_constructed_text: 'Все 8 вилл построены, проверены и готовы к немедленному заселению.',
         feature_furnished_title: 'Полностью меблировано', feature_furnished_text: 'Качественная мебель, кровати, кухонное оборудование и техника уже включены.',
         feature_pool_title: 'Частная зона бассейна', feature_pool_text: 'У каждой виллы есть доступ к бассейну и wellness-зоне под ним.',
@@ -2134,11 +2147,11 @@
       },
       zh: {
         page_title: 'MarbuVillas - 伊斯坦布尔即买即住的高端别墅',
-        nav_about: '项目介绍', nav_villas: '别墅', nav_amenities: '配套', nav_gallery: '图库', nav_location: '位置', nav_booking: '预约参观', nav_contact: '联系我们',
+        nav_about: '项目介绍', nav_villas: '别墅', nav_amenities: '配套', nav_gallery: '图库', nav_location: '位置', nav_booking: '预约参观', nav_contact: 'WhatsApp',
         view_on_sahibinden_short: 'Sahibinden', view_on_sahibinden_arrow: '在 Sahibinden 查看 →', view_on_sahibinden: '在 Sahibinden 查看',
         hero_badge: '✦ 即可入住 - 全套家具', hero_title: '高端别墅 <br/><em>为生活而建</em>', hero_text: '探索我们位于伊斯坦布尔Beylikdüzü的独家别墅项目，拥有全景海景、8套全装修住宅、3,000平方米+园区、西门子电器及三菱中央空调系统。',
         explore_villas: '查看别墅', stat_total_villas: '别墅总数', stat_twin_single: '双拼与独栋', stat_fully_furnished: '全套家具',
-        about_label: '项目介绍', about_title: '拎包入住的生活体验', about_text: '每套别墅均按全尺寸家庭住宅设计，室内面积约375平方米，5间卧室、2间客厅、带海景屋顶露台的主卧套房、2个主厨房、1个迷你厨房、储藏室、服务每层的私人电梯，以及内置三菱中央空调系统。',
+        about_label: '项目介绍', about_title: '拎包入住的生活体验', about_text: '位于享有壮丽海景的黄金地段，每套别墅均按全尺寸家庭住宅设计，室内面积约375平方米，5间卧室、2间客厅、带海景屋顶露台的主卧套房、2个主厨房、1个迷你厨房、储藏室、服务每层的私人电梯，以及内置三菱中央空调系统。',
         feature_constructed_title: '已全部建成', feature_constructed_text: '全部8套别墅均已建成、验收并可立即入住。',
         feature_furnished_title: '全套家具', feature_furnished_text: '包含高品质家具、床具、厨房设备和家电。',
         feature_pool_title: '私人泳池区域', feature_pool_text: '每套别墅都可使用泳池及地下康养设施。',
